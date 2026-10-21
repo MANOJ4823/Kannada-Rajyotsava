@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+<defs><radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#fbf3e4"/><stop offset="1" stop-color="#e8d7bb"/></radialGradient>
+<radialGradient id="plate" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#efe4d2"/></radialGradient></defs>
+<rect width="1600" height="1200" fill="url(#bg)"/><ellipse cx="800" cy="640" rx="520" ry="300" fill="url(#plate)" stroke="#c9b48f" stroke-width="6"/><g transform="rotate(0 860 600)"><ellipse cx="860" cy="600" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M810 600 Q860 582 910 600" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(47 703 648)"><ellipse cx="703" cy="648" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M653 648 Q703 630 753 648" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(94 818 492)"><ellipse cx="818" cy="492" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M768 492 Q818 474 868 492" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(141 968 717)"><ellipse cx="968" cy="717" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M918 717 Q968 699 1018 717" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(8 457 568)"><ellipse cx="457" cy="568" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M407 568 Q457 550 507 568" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(55 1154 480)"><ellipse cx="1154" cy="480" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M1104 480 Q1154 462 1204 480" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(102 784 631)"><ellipse cx="784" cy="631" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M734 631 Q784 613 834 631" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(149 739 538)"><ellipse cx="739" cy="538" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M689 538 Q739 520 789 538" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(16 992 637)"><ellipse cx="992" cy="637" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M942 637 Q992 619 1042 637" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(63 545 656)"><ellipse cx="545" cy="656" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M495 656 Q545 638 595 656" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(110 948 432)"><ellipse cx="948" cy="432" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M898 432 Q948 414 998 432" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(157 926 814)"><ellipse cx="926" cy="814" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M876 814 Q926 796 976 814" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(24 748 584)"><ellipse cx="748" cy="584" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M698 584 Q748 566 798 584" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(71 929 585)"><ellipse cx="929" cy="585" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M879 585 Q929 567 979 585" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(118 683 689)"><ellipse cx="683" cy="689" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M633 689 Q683 671 733 689" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(165 765 454)"><ellipse cx="765" cy="454" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M715 454 Q765 436 815 454" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(32 1066 720)"><ellipse cx="1066" cy="720" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M1016 720 Q1066 702 1116 720" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(79 380 609)"><ellipse cx="380" cy="609" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M330 609 Q380 591 430 609" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(126 843 577)"><ellipse cx="843" cy="577" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M793 577 Q843 559 893 577" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(173 794 670)"><ellipse cx="794" cy="670" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M744 670 Q794 652 844 670" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(40 669 516)"><ellipse cx="669" cy="516" rx="62" ry="30" fill="#7a9a3a" stroke="#5a7428" stroke-width="3"/>
+<path d="M619 516 Q669 498 719 516" stroke="#5a7428" stroke-width="3" fill="none"/></g><g transform="rotate(87 1074 620)"><ellipse cx="1074" cy="620" rx="62" ry="30" fill="#8fae4a" stroke="#5a7428" stroke-width="3"/>
+<path d="M1024 620 Q1074 602 1124 620" stroke="#5a7428" stroke-width="3" fill="none"/></g>
+<text x="800" y="150" text-anchor="middle" font-family="'Noto Serif Kannada','Nirmala UI','Tunga',serif" font-size="80" fill="#8a3c1c">ಕೊಡಗಿನ ಹಸಿರು ಏಲಕ್ಕಿ</text>
+<text x="800" y="1060" text-anchor="middle" font-family="'Fraunces','Georgia',serif" font-size="46" fill="#3d362e">Coorg Green Cardamom</text>
+<text x="800" y="1120" text-anchor="middle" font-family="'Instrument Sans','Segoe UI',Arial,sans-serif" font-size="26" letter-spacing="6" fill="#6e6357">ILLUSTRATION · REGISTERED GI</text></svg>
