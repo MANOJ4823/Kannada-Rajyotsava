@@ -1,4 +1,4 @@
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 const BANKS = [
@@ -64,7 +64,8 @@ export default function Economy() {
           <div className="grid g3 mt-4">
             {SECTORS.map((s, i) => (
               <Reveal key={s.t} delay={i % 3} className="card">
-                <Img k={s.img} ratio="ratio-16x9" credit={false} alt={s.cap || s.t} placeholderNote="Openly licensed photograph not available." />
+                <ZoomImg k={s.img} ratio="ratio-16x9" credit={false} alt={s.cap || s.t} placeholderNote="Openly licensed photograph not available."
+                  title={s.t} eyebrow="Industries" info={<p>{s.d}</p>} />
                 <div className="card-body"><h3 className="h4">{s.t}</h3><p className="mt-1">{s.d}</p>{s.cap && <p className="tiny muted" style={{ margin: '10px 0 0' }}>Photo: {s.cap}</p>}</div>
               </Reveal>
             ))}
@@ -78,7 +79,9 @@ export default function Economy() {
           <div className="grid g2 mt-4">
             {GOLD.map((g, i) => (
               <Reveal key={g.name} delay={i} className="card">
-                <Img k={g.img} ratio="ratio-16x9" credit={false} alt={g.cap} placeholderNote="Openly licensed photograph not available." />
+                <ZoomImg k={g.img} ratio="ratio-16x9" credit={false} alt={g.cap} placeholderNote="Openly licensed photograph not available."
+                  title={g.name} eyebrow={g.place}
+                  info={<><p>{g.d}</p><ul>{g.facts.map((f) => <li key={f} className="small">{f}</li>)}</ul><p className="small" style={{ color: 'var(--copper)', margin: 0 }}>{g.status}</p></>} />
                 <div className="card-body">
                   <div className="tiny muted" style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>{g.place}</div>
                   <h3 className="h4 mt-1">{g.name}</h3>
@@ -104,8 +107,12 @@ export default function Economy() {
             <Note kind="tradition" title="“Ice-cream capital”?">You may hear Mangaluru called India’s ice-cream capital. It is an affectionate local nickname, not an official title.</Note>
           </Reveal>
           <Reveal className="grid g2">
-            <Img k="gadbad" ratio="ratio-3x4" caption="Gadbad ice cream at Pabba’s, Mangaluru" />
-            <Img k="idealIcecream" ratio="ratio-3x4" caption="Ideal Ice Cream, Mangaluru" />
+            <ZoomImg k="gadbad" ratio="ratio-3x4" caption="Gadbad ice cream at Pabba’s, Mangaluru" portrait
+              title="Gadbad" eyebrow="Mangaluru’s ice cream"
+              info={<p>A tall glass layered with ice creams, fruit, jelly and nuts, made famous by Ideal Ice Cream’s parlours, including Pabba’s, in Mangaluru.</p>} />
+            <ZoomImg k="idealIcecream" ratio="ratio-3x4" caption="Ideal Ice Cream, Mangaluru" portrait
+              title="Ideal Ice Cream" eyebrow="Mangaluru · 1975"
+              info={<p>Started in Mangaluru in 1975 by S. Prabhakar Kamath. Its parlours made the gadbad a coastal institution.</p>} />
           </Reveal>
         </div>
       </section>

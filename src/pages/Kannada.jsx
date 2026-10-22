@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, SpeakButton, Tabs, useKannadaVoice } from '../components/ui.jsx';
-import { CENSUS_2011, CONSONANTS, FAMILY, KANNADA_TIMELINE, LANGUAGES, PHRASES, VOWELS, VOWEL_SIGNS } from '../data/kannada.js';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, SpeakButton, Tabs, useKannadaVoice, ZoomImg } from '../components/ui.jsx';
+import { CENSUS_2011, CONSONANTS, FAMILY, KANNADA_TIMELINE, LANGUAGES, MILK, PHRASES, STAGES, VOWELS, VOWEL_SIGNS } from '../data/kannada.js';
 import { SRC } from '../data/sources.js';
 
 function ScriptExplorer({ voice }) {
@@ -118,7 +118,12 @@ export default function Kannada() {
             <p className="prose">The Kadamba period saw Kannada begin to take a place in public records alongside Sanskrit and Prakrit — a shift carried by many generations of scribes and patrons, not decreed by a single ruler.</p>
             <Note kind="interpretation" title="On dates">The commonly cited date of c. 450 CE rests on the inscription’s script and content; some scholars argue for a somewhat later date.</Note>
           </div>
-          <Img k="halmidi" ratio="ratio-3x4" caption="Halmidi inscription — high-resolution digital image made by 3D scanning the original stone" />
+          <ZoomImg k="halmidi" ratio="ratio-3x4" caption="Halmidi inscription — high-resolution digital image made by 3D scanning the original stone"
+            title="Halmidi inscription" eyebrow="Inscription · c. 5th century CE"
+            info={<>
+              <p>Found in Halmidi village in Hassan district, this inscription records a grant in the time of the Kadamba kings. Scholars generally date it to the 5th century CE, and it is one of the most important early Kannada inscriptions.</p>
+              <p className="small muted">The commonly cited date of c. 450 CE rests on the inscription’s script and content; some scholars argue for a somewhat later date.</p>
+            </>} />
         </div>
       </section>
 
@@ -133,7 +138,9 @@ export default function Kannada() {
         <div className="wrap split top">
           <div className="stack">
             <SectionHead eyebrow="For colleagues" title="A small phrasebook" kn="ಪುಟ್ಟ ನುಡಿಗನ್ನಡಿ" lede="Kannada speakers are delighted by any attempt — even a single ನಮಸ್ಕಾರ. Respectful forms (ending -ಇ, -ರಾ) are safest with people you don’t know well." />
-            <Img k="kavirajamarga" ratio="ratio-16x9" caption="A stanza from the Kavirajamarga (c. 850)" />
+            <ZoomImg k="kavirajamarga" ratio="ratio-16x9" caption="A stanza from the Kavirajamarga (c. 850)"
+              title="Kavirajamarga" eyebrow="Text · c. 850"
+              info={<p>The earliest available Kannada work on poetics, from the Rashtrakuta court. It describes the Kannada-speaking land as stretching “from the Kaveri to the Godavari”.</p>} />
           </div>
           <Phrasebook voice={voice} />
         </div>
@@ -157,12 +164,49 @@ export default function Kannada() {
               <h3 className="h3">Haridasa literature · 15th–17th centuries</h3>
               <p className="muted">The Haridasas — wandering devotees of Vishnu — sang in Kannada so that anyone could understand. Purandara Dasa (c. 1484–1564) composed thousands of songs and is traditionally honoured as the “grandfather” (pitāmaha) of Carnatic music for his graded lessons still taught to beginners. Kanaka Dasa (c. 1509–1609), from the Kuruba shepherd community, wrote poetry and songs that challenged caste prejudice.</p>
               <div className="grid g2">
-                <Img k="purandara" ratio="ratio-3x4" caption="Purandara Dasa (artistic depiction)" />
-                <Img k="kanaka" ratio="ratio-3x4" caption="Kanaka Dasa (artistic depiction)" />
+                <ZoomImg k="purandara" ratio="ratio-3x4" caption="Purandara Dasa (artistic depiction)" portrait
+                  title="Purandara Dasa" eyebrow="Haridasa · c. 1484–1564"
+                  info={<p>A wandering devotee of Vishnu who sang in Kannada so that anyone could understand. He composed thousands of songs and is traditionally honoured as the “grandfather” (pitāmaha) of Carnatic music for his graded lessons, still taught to beginners.</p>} />
+                <ZoomImg k="kanaka" ratio="ratio-3x4" caption="Kanaka Dasa (artistic depiction)" portrait
+                  title="Kanaka Dasa" eyebrow="Haridasa · c. 1509–1609"
+                  info={<>
+                    <p>From the Kuruba shepherd community, he wrote poetry and songs that challenged caste prejudice.</p>
+                    <p className="small muted">At Udupi, a small window called Kanakana Kindi is linked to the story that the deity turned to give darshan to Kanaka Dasa when he was refused entry. The story is a cherished tradition.</p>
+                  </>} />
               </div>
               <Note kind="tradition" title="Kanakana Kindi">At Udupi, a small window called Kanakana Kindi is linked to the story that the deity turned to give darshan to Kanaka Dasa when he was refused entry. The story is a cherished tradition.</Note>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="section theme-sand">
+        <div className="wrap">
+          <SectionHead eyebrow="Three stages of one language" title="Old, Middle and Modern Kannada." kn="ಹಳೆಗನ್ನಡ · ನಡುಗನ್ನಡ · ಹೊಸಗನ್ನಡ"
+            lede="Scholars usually describe written Kannada in three broad stages. Each grew out of the one before, so a modern reader can still recognise much of the old language." />
+          <div className="grid g3 mt-4">
+            {STAGES.map((s, i) => (
+              <Reveal key={s.name} delay={i} className="card"><div className="card-body">
+                <div className="meta">{s.when}</div>
+                <h3 className="h4 mt-1">{s.name} <span className="kn-serif muted" style={{ fontSize: '0.95rem' }} lang="kn">{s.kn}</span></h3>
+                <div className="small muted">{s.en}</div>
+                <p className="mt-1">{s.body}</p>
+                <p className="small" style={{ color: 'var(--copper)', marginTop: 6 }}>{s.works}</p>
+              </div></Reveal>
+            ))}
+          </div>
+          <Reveal className="panel white mt-4">
+            <div className="eyebrow plain">One word, three stages: “milk”</div>
+            <div className="pill-row mt-2" role="list">
+              {MILK.map(([kn, tr, stage], i) => (
+                <span key={stage} role="listitem" className="row" style={{ gap: 10, alignItems: 'center' }}>
+                  {i > 0 && <span className="muted" aria-hidden>→</span>}
+                  <span><span className="kn-serif" style={{ fontSize: '1.6rem' }} lang="kn">{kn}</span> <i>{tr}</i> <span className="tiny muted">{stage}</span></span>
+                </span>
+              ))}
+            </div>
+          </Reveal>
+          <div className="mt-4"><Note kind="interpretation" title="On dates">These stages are a convenient scholarly division, not sharp breaks; dates differ between authorities. Many also name an earlier stage, Purvada Halegannada (pre-Old Kannada), for the language of the earliest inscriptions such as Halmidi.</Note></div>
         </div>
       </section>
 

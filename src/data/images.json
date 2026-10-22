@@ -2149,28 +2149,26 @@
   "original": "1080x720"
  },
  "pandiCurry": {
-  "file": "Pandi Curry.jpg",
-  "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Pandi_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "w": 1600,
-  "h": 1263,
-  "page": "https://commons.wikimedia.org/wiki/File:Pandi_Curry.jpg",
-  "author": "Rupak76",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "description": "A sumptuous pork dish from Coorg.",
-  "original": "1755x1385"
+  "file": "pandi-curry.jpg",
+  "src": "/images/supplied/pandi-curry.jpg",
+  "w": 2400,
+  "h": 1600,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Pandi curry, Kodava pork curry"
  },
  "festDasara": {
-  "file": "Mysore Palace Dussehra Illumination.jpg",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mysore_Palace_Dussehra_Illumination.jpg/1920px-Mysore_Palace_Dussehra_Illumination.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Mysore_Palace_Dussehra_Illumination.jpg",
-  "author": "V N GUPTA",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "description": "Mysore Palace in Karnataka",
-  "original": "4000x3000"
+  "file": "mysuru-dasara-jamboo-savari.jpg",
+  "src": "/images/supplied/mysuru-dasara-jamboo-savari.jpg",
+  "w": 2400,
+  "h": 1350,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Caparisoned elephants in the Jamboo Savari procession, with the golden howdah carrying the idol of Goddess Chamundeshwari, Mysuru Dasara"
  },
  "festKambala": {
   "file": "Kambala panning.jpg",
@@ -2185,28 +2183,26 @@
   "original": "4863x3242"
  },
  "festKaraga": {
-  "file": "Poo Karaga making a final round.JPG",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Poo_Karaga_making_a_final_round.JPG/1920px-Poo_Karaga_making_a_final_round.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 1067,
-  "page": "https://commons.wikimedia.org/wiki/File:Poo_Karaga_making_a_final_round.JPG",
-  "author": "Author & Photographer Source:Thigala4u alias Shri from Thigalarapete, Bangalore, India Author has allowed image to be used on Wikipedia under creative Commons attribution. Please follow link and read authors comments.",
-  "license": "CC BY-SA 2.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-  "description": "The Poo Karagu or Theru Karaga returning to the Temple in the morning for one last round.",
-  "original": "3072x2048"
+  "file": "bengaluru-karaga.jpg",
+  "src": "/images/supplied/bengaluru-karaga.jpg",
+  "w": 2400,
+  "h": 1431,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "The jasmine-covered Karaga carried through the crowd, Bengaluru Karaga"
  },
  "festRajyotsava": {
-  "file": "Karnataka Rajyotsava celebration at Belagavi.jpg",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Karnataka_Rajyotsava_celebration_at_Belagavi.jpg/1920px-Karnataka_Rajyotsava_celebration_at_Belagavi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Karnataka_Rajyotsava_celebration_at_Belagavi.jpg",
-  "author": "Djsourabh.bwd",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "description": "This is the photo of Karnataka Rajyotsava celebration at Kitturu Rani Chennamma circle, Belagavi.",
-  "original": "4128x3096"
+  "file": "kannada-rajyotsava.jpg",
+  "src": "/images/supplied/kannada-rajyotsava.jpg",
+  "w": 2400,
+  "h": 1464,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Performers carrying red-and-yellow Kannada flags at a Rajyotsava celebration"
  },
  "festMahamastaka": {
   "file": "Mahamastakabhisheka - Gommateshwara statue (1).jpg",
@@ -2233,28 +2229,26 @@
   "original": "5184x3888"
  },
  "festMelukote": {
-  "file": "Melukote BNC.jpg",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Melukote_BNC.jpg/1920px-Melukote_BNC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 1067,
-  "page": "https://commons.wikimedia.org/wiki/File:Melukote_BNC.jpg",
-  "author": "Prathyush Thomas",
-  "license": "GFDL 1.2",
-  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
-  "description": "Melukote Temple",
-  "original": "3750x2500"
+  "file": "melukote-vairamudi.jpg",
+  "src": "/images/supplied/melukote-vairamudi.jpg",
+  "w": 2400,
+  "h": 1592,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "A night procession of the deity, Melukote"
  },
  "festTalakaveri": {
-  "file": "Talakaveri Temple, Talacauvery and surroundings (37).jpg",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Talakaveri_Temple%2C_Talacauvery_and_surroundings_%2837%29.jpg/1920px-Talakaveri_Temple%2C_Talacauvery_and_surroundings_%2837%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 1200,
-  "page": "https://commons.wikimedia.org/wiki/File:Talakaveri_Temple,_Talacauvery_and_surroundings_(37).jpg",
-  "author": "Vinayaraj",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "description": "Coorg photos",
-  "original": "4608x3456"
+  "file": "talakaveri-tula-sankramana.jpg",
+  "src": "/images/supplied/talakaveri-tula-sankramana.jpg",
+  "w": 2400,
+  "h": 1800,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Devotees at the sacred tank, Talakaveri"
  },
  "festBhutaKola": {
   "file": "Appe Rakhteshwari Kola.jpg",
@@ -2269,16 +2263,15 @@
   "original": "1170x2080"
  },
  "festDaivaKola": {
-  "file": "Tannimaniga daiva.jpg",
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Tannimaniga_daiva.jpg/1920px-Tannimaniga_daiva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "w": 1600,
-  "h": 2843,
-  "page": "https://commons.wikimedia.org/wiki/File:Tannimaniga_daiva.jpg",
-  "author": "Prajna gopal",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "description": "ತನ್ನಿಮಾನಿಗ ದೈವ",
-  "original": "2296x4080"
+  "file": "daiva-kola.jpg",
+  "src": "/images/supplied/daiva-kola.jpg",
+  "w": 2400,
+  "h": 1600,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "A daiva kola performer with a halo of tender arecanut and coconut fronds"
  },
  "vachanaSinging": {
   "file": "vachana-singing.jpg",
@@ -3222,5 +3215,107 @@
   "license": "Used with organisers’ permission",
   "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
   "description": "Shreyanka Patil with the Women’s Premier League trophy"
+ },
+ "siddharthaPortrait": {
+  "file": "vg-siddhartha.jpg",
+  "src": "/images/supplied/vg-siddhartha.jpg",
+  "w": 2400,
+  "h": 2400,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "V. G. Siddhartha"
+ },
+ "sankeshwarPortrait": {
+  "file": "vijay-sankeshwar.jpg",
+  "src": "/images/supplied/vijay-sankeshwar.jpg",
+  "w": 2400,
+  "h": 2400,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Vijay Sankeshwar"
+ },
+ "bolakAat": {
+  "file": "kodava-bolak-aat.jpg",
+  "src": "/images/supplied/kodava-bolak-aat.jpg",
+  "w": 2400,
+  "h": 1342,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (watermark: akcreations; clarity enhanced)",
+  "description": "Kodava men performing Bolak-aat in traditional dress"
+ },
+ "stateButterfly": {
+  "file": "Troides minos 06680.jpg",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Troides_minos_06680.jpg/1920px-Troides_minos_06680.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "w": 1600,
+  "h": 1067,
+  "page": "https://commons.wikimedia.org/wiki/File:Troides_minos_06680.jpg",
+  "author": "Vengolis",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "description": "Troides minos",
+  "original": "4800x3200"
+ },
+ "stateFish": {
+  "file": "P.car-image.jpg",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/P.car-image.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "w": 1600,
+  "h": 839,
+  "page": "https://commons.wikimedia.org/wiki/File:P.car-image.jpg",
+  "author": "Dr N Basavaraja",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "description": "Barbodes carnaticus India, Karnataka, July 2010, 29 cm, by Dr N Basavaraja",
+  "original": "534x280"
+ },
+ "stateFruit": {
+  "file": "Mangifera indica (Manguier 4).jpg",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Mangifera_indica_%28Manguier_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "w": 1600,
+  "h": 1200,
+  "page": "https://commons.wikimedia.org/wiki/File:Mangifera_indica_(Manguier_4).jpg",
+  "author": "Fpalli",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "description": "Mangues.",
+  "original": "1280x960"
+ },
+ "festPattadakal": {
+  "file": "pattadakal-dance-festival.jpg",
+  "src": "/images/supplied/pattadakal-dance-festival.jpg",
+  "w": 2400,
+  "h": 1200,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Dancers on the festival stage, Pattadakal Dance Festival"
+ },
+ "wadiyarFamily": {
+  "file": "mysore-wadiyar-family.jpg",
+  "src": "/images/supplied/mysore-wadiyar-family.jpg",
+  "w": 1347,
+  "h": 2400,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "The Wadiyar family at the Mysore Palace"
+ },
+ "anegundiFamily": {
+  "file": "anegundi-royal-family.jpg",
+  "src": "/images/supplied/anegundi-royal-family.jpg",
+  "w": 2400,
+  "h": 1780,
+  "supplied": true,
+  "author": "Supplied by the organisers",
+  "license": "Used with organisers’ permission",
+  "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
+  "description": "Members of the Anegundi royal family"
  }
 }

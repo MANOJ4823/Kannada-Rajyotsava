@@ -30,6 +30,11 @@ const ARTS = [
   { id: 'kolata', name: 'Kolata', kn: 'ಕೋಲಾಟ', img: 'kolataSupplied', cap: 'Dancers performing the Kolata stick dance', cat: 'Folk dance',
     region: 'Villages across Karnataka — and across South India and beyond', instruments: 'Pairs of short sticks (kolu); songs', costume: 'Everyday festive dress',
     context: 'Village festivals and celebrations; performed by men and women.', meaning: 'Dancers strike sticks in rhythm with partners while moving in circles. It is shared by many regions, not exclusive to Karnataka.' },
+  { id: 'bolakaat', name: 'Bolak-aat', kn: 'ಬೊಳಕಾಟ್', img: 'bolakAat', cap: 'Kodava men performing Bolak-aat in traditional dress', cat: 'Folk dance',
+    region: 'Kodagu (Coorg)', instruments: 'The dudi, a small hourglass drum, played by elders who sing the dance songs',
+    costume: 'Kodava ceremonial dress: the long kupya coat, a red-and-gold chele sash with the peechekathi dagger, and a white zari-bordered turban',
+    context: 'A Kodava men’s dance performed in a circle around a tall brass oil lamp, on the village festival ground (mand) or temple premises, notably during Puthari, the harvest festival. Dancers hold the broad odikathi sword and a chavari (yak-tail whisk).',
+    meaning: 'The name means “lamp dance” — bolak is lamp or light and aat is dance. Religious in character, its songs praise the gods and tell of Kodava myth, history and heroes.' },
   { id: 'janapada', name: 'Janapada songs & storytelling', kn: 'ಜನಪದ ಹಾಡು', img: 'janapadaSingers', cap: 'Folk singers with a drum and a stringed instrument', cat: 'Music',
     region: 'Every region', instruments: 'Tamboori, damaru, voice', costume: '—',
     context: 'Sobane wedding songs, grinding songs, lavani ballads, Gee Gee songs of North Karnataka, and the long sung epics of Male Mahadeshwara and Manteswamy by travelling tamboori singers.',
@@ -86,7 +91,8 @@ export default function Arts() {
             <Note kind="interpretation" title="Shared traditions">Many art forms here — Kolata, Carnatic music, Yakshagana-like theatre — are also practised in neighbouring states. Celebrating Karnataka’s versions does not mean claiming them exclusively.</Note>
             <Note kind="fact" title="Audio and video">We have not embedded recordings: performances belong to their artists and troupes. Watch live — Rajyotsava season is full of free performances.</Note>
           </div>
-          <div className="mt-4"><Sources items={[SRC.culture, SRC.kaTourism, SRC.W('Yakshagana'), SRC.W('Dollu Kunitha'), SRC.W('Mysore painting'), SRC.W('Kannada cinema'), SRC.W('Ninasam')]} /></div>
+          <div className="mt-4"><Sources items={[SRC.culture, SRC.kaTourism, SRC.W('Yakshagana'), SRC.W('Dollu Kunitha'), SRC.W('Mysore painting'), SRC.W('Kannada cinema'), SRC.W('Ninasam'), SRC.W('Folk arts of Karnataka'),
+            { label: 'Mysore University Vishwakosha — Karnataka Janapada (Kodagu)', url: 'https://kn.wikisource.org/wiki/ಮೈಸೂರು_ವಿಶ್ವವಿದ್ಯಾನಿಲಯ_ವಿಶ್ವಕೋಶ/ಕರ್ನಾಟಕ_ಜಾನಪದ', kind: 'Scholarly' }]} /></div>
         </div>
       </section>
       <section className="section theme-sand" id="festivals" aria-labelledby="festivals-h">

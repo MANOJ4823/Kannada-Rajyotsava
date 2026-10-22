@@ -165,14 +165,6 @@ export const MONUMENTS = [
     story: 'Shivappa Nayaka (r. 1645–1660) is remembered for his fair land-revenue system, the “shist”. Whether the palace was his or built later, it now preserves the region’s history as a museum.',
     related: ['chitradurga', 'mysorepalace'], sources: [SRC.W('Keladi Nayaka kingdom'), SRC.W('Shivamogga')],
   },
-  {
-    id: 'iskcon', name: 'ISKCON Sri Radha Krishna Temple', hist: '—', place: 'bengaluru', location: 'Hare Krishna Hill, Rajajinagar, Bengaluru', period: 'Inaugurated 1997',
-    patron: 'International Society for Krishna Consciousness (ISKCON) Bangalore', patronKind: 'fact', style: 'Modern temple combining South Indian gopura forms with contemporary design', type: 'temple', also: ['modern'],
-    unesco: null, img: 'iskcon', dynasty: 'Modern Karnataka', chapter: null, page: { to: '/bengaluru', label: 'Read the Bengaluru chapter' },
-    features: ['Built on a hill, with a gold-plated flagpost and kalasha', 'One of the largest ISKCON temples in the world', 'Festivals such as Brahmotsava light up the temple at night'],
-    story: 'A living, modern temple: its devotees started the Akshaya Patra Foundation in 2000, which now serves mid-day meals to schoolchildren across India.',
-    related: ['bangalorepalace', 'vidhanasoudha'], sources: [SRC.W('ISKCON Temple, Bengaluru')],
-  },
 ];
 
 export const TYPES = [

@@ -1,4 +1,4 @@
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Badge } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Badge, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 // Award years are the official award years of the Jnanpith (not publication years of the works).
@@ -65,7 +65,14 @@ export default function Literature() {
             {JNANPITH.map((j, i) => (
               <Reveal key={j.name} className="jp" delay={i % 3}>
                 <div className="yr">{j.yr}</div>
-                <Img k={j.img} ratio="" caption={j.imgCap} credit />
+                <ZoomImg k={j.img} ratio="" caption={j.imgCap} credit portrait
+                  title={j.name} eyebrow={`Jnanpith Award · ${j.yr}`}
+                  info={<>
+                    <div className="kn-serif" style={{ color: 'var(--copper)', fontSize: '1.3rem' }} lang="kn">{j.kn}</div>
+                    <div className="small muted">{j.full}</div>
+                    <dl className="facts"><div><dt>Cited by the award</dt><dd>{j.cited}{j.note && <div className="small muted" style={{ marginTop: 4 }}>{j.note}</div>}</dd></div></dl>
+                    <p>{j.body}</p>
+                  </>} />
                 <div>
                   <h3>{j.name}</h3>
                   <div className="kn" lang="kn">{j.kn}</div>
@@ -86,8 +93,9 @@ export default function Literature() {
           <div className="grid g4 mt-4">
             {POETS.map((p, i) => (
               <Reveal key={p.name} delay={i % 3} className="card">
-                <Img k={p.img} ratio="ratio-1" caption={p.imgCap} credit={false} alt={p.name}
-                  placeholderNote="No verified portrait exists. Images of early poets are later artistic imaginings." />
+                <ZoomImg k={p.img} ratio="ratio-1" caption={p.imgCap} credit={false} alt={p.name} portrait
+                  placeholderNote="No verified portrait exists. Images of early poets are later artistic imaginings."
+                  title={p.name} eyebrow={p.when} info={<p>{p.d}</p>} />
                 <div className="card-body"><div className="meta">{p.when}</div><h3 className="h4 mt-1">{p.name}</h3><p className="mt-1">{p.d}</p></div>
               </Reveal>
             ))}

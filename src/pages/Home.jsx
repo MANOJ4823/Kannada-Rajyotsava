@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../i18n.jsx';
 import { CHAPTERS, knNum } from '../data/chapters.js';
-import { Credit, Img, Reveal, img } from '../components/ui.jsx';
+import { Credit, Img, Reveal, img, ZoomImg } from '../components/ui.jsx';
 import { KarnatakaMap } from '../components/maps.jsx';
 
 const SLIDES = [
@@ -209,10 +209,16 @@ function Welcome() {
           </div>
         </Reveal>
         <Reveal className="grid g2">
-          <Img k="mysorePak" ratio="ratio-3x4" caption="Mysore pak" zoom />
+          <ZoomImg k="mysorePak" ratio="ratio-3x4" caption="Mysore pak" zoom
+            title="Mysore pak" eyebrow="A palace sweet"
+            info={<p>Three ingredients — gram flour, ghee and sugar — and a great deal of skill. The popular story credits the royal cook Kakasura Madappa in the Mysore Palace kitchens; it is a cherished tradition rather than a recorded fact.</p>} />
           <div className="stack">
-            <Img k="masalaDosa" ratio="ratio-1" caption="Masala dosa" zoom />
-            <Img k="filterCoffee" ratio="ratio-1" caption="Filter coffee" zoom />
+            <ZoomImg k="masalaDosa" ratio="ratio-1" caption="Masala dosa" zoom
+              title="Masala dosa" eyebrow="Idli & dosa traditions"
+              info={<p>Steamed idli and crisp dosa are shared across South India. Karnataka adds its own: the masala dosa of Udupi-style restaurants, thick set dose, Davanagere benne dose, and rava idli.</p>} />
+            <ZoomImg k="filterCoffee" ratio="ratio-1" caption="Filter coffee" zoom
+              title="Filter coffee" eyebrow="ಫಿಲ್ಟರ್ ಕಾಫಿ"
+              info={<p>Brewed in a metal filter and served frothy in a tumbler and dabara. India’s coffee story is closely tied to Chikkamagaluru and Kodagu.</p>} />
           </div>
         </Reveal>
       </div>

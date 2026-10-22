@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Tabs } from '../components/ui.jsx';
+import { Img, Modal, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Tabs } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 const NO_PORTRAIT = 'No contemporary portrait survives. We show no invented likeness.';
@@ -22,6 +22,12 @@ const GROUPS = {
         body: 'Held Chitradurga until it fell after a long siege in 1779. The fort was built in several phases; individual walls and structures are attributed variously to him, his predecessors and later rulers, so we avoid crediting him with the whole fort.' },
       { name: 'Nalwadi Krishnaraja Wadiyar (Krishnaraja Wadiyar IV)', when: 'r. 1894–1940', role: 'Maharaja of Mysore · Title: “Rajarshi”', img: 'nalwadi', cap: 'Krishnaraja Wadiyar IV',
         body: 'Under his rule Mysore established the University of Mysore (1916), the Krishna Raja Sagara dam, the Mysore Iron Works at Bhadravati, the Government Soap Factory and the Bank of Mysore, and appointed the Miller Committee (1918) on representation for backward communities. He is popularly remembered by the title “Rajarshi” (saint-king).' },
+      { name: 'The Wadiyar family today', when: '2015 – present', role: 'Former royal family of Mysore · Custodians of the palace’s Dasara traditions', img: 'wadiyarFamily', group: true,
+        cap: 'Yaduveer Krishnadatta Chamaraja Wadiyar and Trishika Kumari Wadiyar with Pramoda Devi Wadiyar and their two sons, Aadyaveer and Yugadhyaksh, at Mysore Palace',
+        body: 'After Srikantadatta Narasimharaja Wadiyar died in 2013, his widow Pramoda Devi Wadiyar adopted Yaduveer Krishnadatta Chamaraja Wadiyar in 2015; he was installed as head of the family at Mysore Palace on 28 May that year. Princely titles and privy purses were abolished in 1971, so the family’s role today is ceremonial and cultural, seen most clearly in the private Navaratri rituals and the Khasagi Durbar during Dasara. Yaduveer married Trishika Kumari of the Dungarpur family in 2016; they have two sons, Aadyaveer (b. 2017) and Yugadhyaksh (b. 2024). In 2024 Yaduveer was elected to the Lok Sabha from Mysore.' },
+      { name: 'The Anegundi family today', when: 'Anegundi, Koppal district', role: 'Descendants of the Aravidu rulers of the Karnata (Vijayanagara) empire', img: 'anegundiFamily', group: true,
+        cap: 'Members of the Anegundi family, descendants of the Vijayanagara rulers, at the family home',
+        body: 'Anegundi, on the north bank of the Tungabhadra opposite Hampi, was an early seat of the Karnata (Vijayanagara) empire before its capital moved across the river; tradition links its beginnings to the brothers Harihara and Bukka, and identifies Anegundi with Kishkindha of the Ramayana. The family, known locally as the Anegundi royal family, traces its descent from the Aravidu rulers, the empire’s last dynasty. Krishna Devaraya, who describes himself as the 19th descendant, has restored the family’s ancestral mansion, the Heere Deewan, where the family’s trust held a Vijayanagara Utsava in 2024 displaying family textiles, weapons and documents; family members also take part in temple festivals around Hampi.' },
     ],
   },
   builders: {
@@ -40,6 +46,10 @@ const GROUPS = {
         body: 'Became the first woman engineer hired by TELCO; later chaired the Infosys Foundation, supporting education, health and libraries. A prolific author in Kannada and English, she was nominated to the Rajya Sabha in 2024. Her work is distinct from her husband’s role at Infosys.' },
       { name: 'Kiran Mazumdar-Shaw', when: 'b. 1953, Bengaluru', role: 'Founder, Biocon · Padma Shri 1989 · Padma Bhushan 2005', img: 'kiranMazumdar', cap: 'Kiran Mazumdar-Shaw, 2014',
         body: 'Trained as a brewer in Australia, she founded Biocon in Bengaluru in 1978, starting in a rented garage. It grew from an enzymes maker into a major biopharmaceutical company, and in 2004 became the first Indian biotechnology company to offer its shares to the public. Through the Biocon Foundation and the Mazumdar-Shaw Medical Foundation she has supported low-cost clinics and cancer care.' },
+      { name: 'Vijay Sankeshwar', when: 'b. 1950, Betageri (Gadag)', role: 'Founder, VRL Logistics and Vijayavani · Padma Shri 2020', img: 'sankeshwarPortrait', cap: 'Vijay Sankeshwar',
+        body: 'He started a transport business in Gadag in 1976 with a single truck and built it into VRL Logistics, based in Hubballi, one of India’s largest private fleets of commercial vehicles. He also founded the Kannada dailies Vijaya Karnataka (1999, later sold) and Vijayavani (2012), and represented Dharwad North in the Lok Sabha from 1996 to 2004.' },
+      { name: 'V. G. Siddhartha', when: 'c. 1959–2019', role: 'Founder, Café Coffee Day', img: 'siddharthaPortrait', cap: 'V. G. Siddhartha',
+        body: 'From a coffee-growing family in Chikkamagaluru district, he began trading coffee in the early 1990s and opened the first Café Coffee Day on Brigade Road, Bengaluru, in 1996. The chain took café culture to towns and cities across India, serving coffee grown in Karnataka. He also invested in technology companies, including Mindtree. He died in July 2019.' },
       { name: 'Nithin Kamath & Nikhil Kamath', when: 'Zerodha, founded 2010', role: 'Fintech entrepreneurs, Bengaluru', img: 'nithinKamath', cap: 'Nithin Kamath', img2: 'nikhilKamath', cap2: 'Nikhil Kamath',
         body: 'The brothers co-founded Zerodha, a Bengaluru-based brokerage that brought low-cost online investing to millions, and the Rainmatter initiatives supporting fintech and climate start-ups.' },
       { name: 'Saalumarada Thimmakka', when: 'Hulikal, Ramanagara district', role: 'Environmentalist · Padma Shri 2019', img: 'thimmakka', cap: 'Saalumarada Thimmakka, 2011',
@@ -154,12 +164,18 @@ const GROUPS = {
   },
 };
 
-function Person({ p }) {
+function Person({ p, onOpen }) {
   return (
     <Reveal className="person">
       <div className="stack">
-        <Img k={p.img} ratio="ratio-1" credit={false} alt={p.cap || p.name} placeholderNote={p.note} />
-        {p.img2 && <Img k={p.img2} ratio="ratio-1" credit={false} alt={p.cap2} />}
+        <button className="img-open" onClick={() => onOpen({ p, k: p.img, cap: p.cap })} aria-label={`${p.name}: open enlarged image and details`}>
+          <Img k={p.img} ratio="ratio-1" credit={false} alt={p.cap || p.name} placeholderNote={p.note} />
+        </button>
+        {p.img2 && (
+          <button className="img-open" onClick={() => onOpen({ p, k: p.img2, cap: p.cap2 })} aria-label={`${p.cap2}: open enlarged image and details`}>
+            <Img k={p.img2} ratio="ratio-1" credit={false} alt={p.cap2} />
+          </button>
+        )}
       </div>
       <div>
         <div className="tiny muted" style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>{p.when}</div>
@@ -175,6 +191,7 @@ function Person({ p }) {
 
 export default function People() {
   const [g, setG] = useState('rulers');
+  const [open, setOpen] = useState(null);
   const group = GROUPS[g];
   return (
     <>
@@ -188,16 +205,31 @@ export default function People() {
               <SectionHead eyebrow={`${group.people.length} people`} title={group.label} lede={group.intro} />
               {g === 'rulers' && <Note kind="interpretation" title="Context">Kingdoms overlapped and borders moved. See the timeline chapter to compare their periods.</Note>}
             </div>
-            <div>{group.people.map((p) => <Person key={p.name} p={p} />)}</div>
+            <div>{group.people.map((p) => <Person key={p.name} p={p} onOpen={setOpen} />)}</div>
           </div>
           <div className="mt-5"><Sources items={[SRC.padma, SRC.dff, SRC.pib, SRC.kamath, SRC.W('M. Visvesvaraya'), SRC.W('Saalumarada Thimmakka'), SRC.W('Arun Yogiraj'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Anil Kumble'),
             SRC.W('Rani Chennabhairadevi'), SRC.W('Keladi Chennamma'), SRC.W('Sangolli Rayanna'), SRC.W('Madhvacharya'), SRC.W('Vidyaranya'), SRC.W('Jakanachari'), SRC.W('Shivakumara Swami'),
             SRC.W('K. M. Cariappa'), SRC.W('Kodandera Subayya Thimayya'), SRC.W('C. D. Subbaiah'), SRC.W('Biddanda Chengappa Nanda'),
             SRC.W('Kiran Mazumdar-Shaw'), SRC.W('K. Kasturirangan'), SRC.W('Anke Gowda'), SRC.W('Devi Shetty'), SRC.W('C. N. Manjunath'),
             SRC.W('E. S. Venkataramiah'), SRC.W('B. V. Nagarathna'), SRC.W('Puttanna Kanagal'), SRC.W('P. Lankesh'), SRC.W('M. V. Kamath'), SRC.W('Chowdiah'),
-            SRC.W('Ashwini Ponnappa'), SRC.W('Poovamma Machettira'), SRC.W('Shreyanka Patil')]} /></div>
+            SRC.W('Ashwini Ponnappa'), SRC.W('Poovamma Machettira'), SRC.W('Shreyanka Patil'), SRC.W('Vijay Sankeshwar'), SRC.W('V. G. Siddhartha'), SRC.W('Yaduveer Krishnadatta Chamaraja Wadiyar'), SRC.W('Twenty-sixth Amendment of the Constitution of India'), SRC.W('Anegundi'), SRC.W('Aravidu dynasty'),
+            { label: 'The Hindu — Krishna Devaraya’s descendant on the Vijayanagara Utsava (16 Feb 2024)', url: 'https://www.thehindu.com/news/national/karnataka/emperor-krishna-devarayas-descendent-throws-light-on-multiculturalism-thriving-in-vijayanagara-empire/article67849575.ece', kind: 'Reference (secondary)' }]} /></div>
         </div>
       </section>
+      {open && (
+        <Modal onClose={() => setOpen(null)} label={open.p.name}>
+          <div className="modal-grid">
+            <Img k={open.k} ratio="" caption={open.cap} placeholderNote={open.p.note} className={open.p.group ? 'pop-group' : 'pop-portrait'} />
+            <div className="modal-body stack">
+              <div className="eyebrow">{group.label}</div>
+              <h2 className="h2">{open.p.name}</h2>
+              <div className="tiny muted" style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>{open.p.when}</div>
+              <div className="role">{open.p.role}</div>
+              <p>{open.p.body}</p>
+            </div>
+          </div>
+        </Modal>
+      )}
       <NextChapter path="/people" />
     </>
   );

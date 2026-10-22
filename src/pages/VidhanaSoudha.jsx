@@ -1,4 +1,4 @@
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 const FACTS = [
@@ -25,19 +25,28 @@ export default function VidhanaSoudha() {
             <p className="prose">Kengal Hanumanthaiah, Chief Minister of Mysore State from 1952 to 1956, drove the project. Mysore’s legislature had outgrown the colonial-era Attara Kacheri (1868), across the road — today the High Court of Karnataka. The new building was designed in the Public Works Department, with B. R. Manickam usually credited as its chief architect, and was built by thousands of workers and stone craftsmen.</p>
             <p className="prose">Its style is often called Neo-Dravidian: a symmetrical plan and classical colonnade combined with motifs from South Indian temple architecture — carved brackets, pillared porches and tiered domes crowned with finials.</p>
           </div>
-          <Img k="hanumanthaiah" ratio="ratio-3x4" caption="Kengal Hanumanthaiah" />
+          <ZoomImg k="hanumanthaiah" ratio="ratio-3x4" caption="Kengal Hanumanthaiah" portrait
+            title="Kengal Hanumanthaiah" eyebrow="Chief Minister of Mysore State, 1952–1956"
+            info={<p>He drove the project to build the Vidhana Soudha, after Mysore’s legislature had outgrown the colonial-era Attara Kacheri across the road.</p>} />
         </div>
       </section>
 
       <section className="section">
         <div className="wrap grid g2">
           <Reveal className="stack">
-            <Img k="attaraKacheri" ratio="ratio-4x3" caption="Attara Kacheri (1868), now the High Court of Karnataka" />
+            <ZoomImg k="attaraKacheri" ratio="ratio-4x3" caption="Attara Kacheri (1868), now the High Court of Karnataka"
+              title="Attara Kacheri" eyebrow="Colonial public building · 1868"
+              info={<p>The red Attara Kacheri, built in a Greco-Roman style for the administration of the British Commission, housed Mysore’s offices and legislative bodies. Today it is the High Court of Karnataka.</p>} />
             <h3 className="h3">Colonial public building</h3>
             <p className="muted">The red Attara Kacheri, built in a Greco-Roman style for the administration of the British Commission, housed Mysore’s offices and legislative bodies. It represents a government designed elsewhere.</p>
           </Reveal>
           <Reveal className="stack" delay={1}>
-            <Img k="vidhanaSoudha" ratio="ratio-4x3" caption="Vidhana Soudha (1956)" />
+            <ZoomImg k="vidhanaSoudha" ratio="ratio-4x3" caption="Vidhana Soudha (1956)"
+              title="Vidhana Soudha" eyebrow="Post-independence public building · 1956"
+              info={<>
+                <p>It faces the Attara Kacheri, deliberately larger and built in an Indian idiom, for a legislature elected by universal adult franchise.</p>
+                <p className="small muted">Its style is often called Neo-Dravidian: a symmetrical plan and classical colonnade combined with motifs from South Indian temple architecture.</p>
+              </>} />
             <h3 className="h3">Post-independence public building</h3>
             <p className="muted">The Vidhana Soudha faces it, deliberately larger and built in an Indian idiom, for a legislature elected by universal adult franchise. Mysore already had a long representative tradition — the Mysore Representative Assembly was created in 1881 and a Legislative Council in 1907.</p>
           </Reveal>

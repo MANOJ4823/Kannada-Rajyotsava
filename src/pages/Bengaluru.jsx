@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge, Img, Modal, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Badge, Img, Modal, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 const ERAS = [
@@ -68,7 +68,9 @@ export default function Bengaluru() {
               <p className="lede">{e.d}</p>
               {era === 0 && <Badge kind="tradition">The “boiled beans” story is folklore</Badge>}
             </div>
-            <Img k={e.img} ratio="ratio-4x3" caption={e.cap} alt={e.cap || e.t} placeholderNote="No verified image for this period." />
+            <ZoomImg k={e.img} ratio="ratio-4x3" caption={e.cap} alt={e.cap || e.t} placeholderNote="No verified image for this period."
+              title={e.t} eyebrow={e.y}
+              info={<><p>{e.d}</p>{era === 0 && <div><Badge kind="tradition">The “boiled beans” story is folklore</Badge></div>}</>} />
           </div>
         </div>
       </section>
@@ -115,7 +117,9 @@ export default function Bengaluru() {
       <section className="section theme-indigo">
         <div className="wrap split">
           <SectionHead eyebrow="Today" title="A city of science, industry and start-ups." lede="IISc, ISRO, HAL, the National Aerospace Laboratories, NIMHANS, IIM Bangalore and the National Centre for Biological Sciences stand alongside software, biotech and aerospace companies. Bengaluru is often called India’s Silicon Valley — a popular nickname, not an official title." />
-          <Img k="iisc" ratio="ratio-4x3" caption="Main Building, Indian Institute of Science (founded 1909)" />
+          <ZoomImg k="iisc" ratio="ratio-4x3" caption="Main Building, Indian Institute of Science (founded 1909)"
+            title="Indian Institute of Science" eyebrow="Founded 1909"
+            info={<p>A research university that, with aircraft and electronics factories, defence and space laboratories and engineering colleges, helped build Bengaluru’s rise as a technology centre.</p>} />
         </div>
       </section>
 

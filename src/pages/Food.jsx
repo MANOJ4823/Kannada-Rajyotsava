@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { KarnatakaMap } from '../components/maps.jsx';
 import { DISHES, FOOD_REGIONS, MYSORE_PAK_STEPS } from '../data/food.js';
 import { SRC } from '../data/sources.js';
@@ -10,7 +10,14 @@ function DishCard({ d }) {
   const r = FOOD_REGIONS[d.region];
   return (
     <Reveal className="card food-card">
-      <Img k={d.img} ratio="ratio-4x3" credit={false} alt={d.imgCap || d.name} caption={undefined} placeholderNote="A verified, openly licensed photograph of this dish was not available." />
+      <ZoomImg k={d.img} ratio="ratio-4x3" credit={false} alt={d.imgCap || d.name} caption={undefined} placeholderNote="A verified, openly licensed photograph of this dish was not available."
+        title={d.name} eyebrow={r.label}
+        info={<>
+          <div className="kn-serif" style={{ color: 'var(--copper)', fontSize: '1.3rem' }} lang="kn">{d.kn}</div>
+          <p>{d.d}</p>
+          {d.story && <p className="small muted">{d.story} {d.kind && <Badge kind={d.kind} />}</p>}
+          <dl className="facts"><div><dt>Ingredients</dt><dd>{d.ing}</dd></div></dl>
+        </>} />
       <div className="card-body">
         <div className="kn-name" lang="kn">{d.kn}</div>
         <h3 className="h4 mt-1">{d.name}</h3>
@@ -72,7 +79,13 @@ export default function Food() {
             <Note kind="tradition" title="Traditional account">No contemporary palace record of the invention is known; this is a family and popular tradition, widely accepted and cherished.</Note>
           </Reveal>
           <Reveal className="stack">
-            <Img k="mysorePak" ratio="ratio-4x3" caption="Mysore pak" />
+            <ZoomImg k="mysorePak" ratio="ratio-4x3" caption="Mysore pak"
+              title="Mysore pak" eyebrow="A palace sweet"
+              info={<>
+                <p>Three ingredients — gram flour, ghee and sugar — and a great deal of skill.</p>
+                <p className="small muted">The commonly told story places its creation in the kitchens of the Mysore Palace and credits the royal cook Kakasura Madappa. No contemporary palace record of the invention is known; this is a family and popular tradition.</p>
+                <div><Badge kind="tradition" /></div>
+              </>} />
             <ol className="story-steps">{MYSORE_PAK_STEPS.map((s) => <li key={s}><span>{s}</span></li>)}</ol>
             <p className="small muted">Texture has evolved: the traditional sweet is firm, porous and slightly crumbly, while many modern shops make a soft, melt-in-the-mouth version with far more ghee.</p>
           </Reveal>

@@ -68,6 +68,22 @@ export const LANGUAGES = [
   { name: 'Many more', kn: 'ಇನ್ನೂ ಹಲವು', where: 'Across the state', body: 'Havyaka and Arebhashe (varieties of Kannada), Sanketi, Saurashtri, Siddi communities speaking Kannada and Konkani, Soliga and other tribal languages, Hindi in the cities — and the many languages colleagues bring to Bengaluru.' },
 ];
 
+// Conventional periodisation of the language. Boundaries are approximate and overlap.
+export const STAGES = [
+  { name: 'Halegannada', kn: 'ಹಳೆಗನ್ನಡ', en: 'Old Kannada', when: 'c. 9th–12th century',
+    body: 'The language of the Rashtrakuta and Kalyani Chalukya courts and of the great Jain poets. It still used the letters ಱ (ṟa) and ೞ (ḻa), and its classical poetry mixed verse and prose in the champu style, rich in Sanskrit vocabulary.',
+    works: 'Kavirajamarga (c. 850); Pampa’s Adipurana and Vikramarjuna Vijaya (941); Ponna and Ranna' },
+  { name: 'Nadugannada', kn: 'ನಡುಗನ್ನಡ', en: 'Middle Kannada', when: 'c. 12th–17th century',
+    body: 'Closer to the speech of ordinary people. An initial “p” in many words became “h”, the letters ಱ and ೞ fell out of use, and native metres such as the ragale, shatpadi and sangatya replaced the courtly champu.',
+    works: 'Vachanas of the 12th century, often seen as the start of the shift; Harihara and Raghavanka; Kumaravyasa’s Karnata Bharata Kathamanjari; the Haridasa songs' },
+  { name: 'Hosagannada', kn: 'ಹೊಸಗನ್ನಡ', en: 'Modern Kannada', when: 'c. 18th century to today',
+    body: 'Most words that once ended in a consonant gained a final vowel, and a standard prose grew with printing, newspapers and schools in the 19th century. It is the Kannada of the Navodaya poets, of cinema and of everyday conversation today.',
+    works: 'Muddana’s prose; Kuvempu, D. R. Bendre and the Navodaya movement; the Kannada spoken and written today' },
+];
+
+// One word through the three stages: “milk”
+export const MILK = [['ಪಾಲ್', 'pāl', 'Halegannada'], ['ಹಾಲ್', 'hāl', 'Nadugannada'], ['ಹಾಲು', 'hālu', 'Hosagannada']];
+
 export const KANNADA_TIMELINE = [
   { when: '5th century', t: 'Halmidi inscription', d: 'A major early Kannada inscription, generally dated to the 5th century CE. Not necessarily the first Kannada ever written — earlier Kannada words appear in Prakrit and other records.' },
   { when: 'c. 700', t: 'Kappe Arabhatta inscription, Badami', d: 'Early Kannada verse in the tripadi metre.' },

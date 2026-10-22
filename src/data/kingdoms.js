@@ -23,7 +23,6 @@ export const KINGDOMS = [
       { k: 'halmidi', cap: 'Halmidi inscription (3D scan) — a major early Kannada inscription, generally dated to the 5th century CE' },
       { k: 'mayurasharma', cap: 'Talagunda pillar inscription (3D scan), Sanskrit, 5th century' },
       { k: 'talagunda', cap: 'Praneshvara Temple, Talagunda (Shivamogga district)' },
-      { k: 'mayurasharmaPortrait', cap: 'Mayurasharma, founder of the Kadamba dynasty — artistic depiction (no contemporary portrait survives)' },
     ],
     remains: ['Banavasi and the Madhukeshwara temple, where the state holds the annual Kadambotsava', 'The Talagunda pillar inscription and Praneshvara temple', 'The Halmidi inscription — a replica stands in Halmidi village, Hassan district'],
     sources: [SRC.kamath, SRC.sastri, SRC.W('Kadamba dynasty'), SRC.W('Halmidi inscription'), SRC.W('Talagunda')],

@@ -104,7 +104,9 @@ export default function Monuments() {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 {list.map((m) => (
                   <li key={m.id} className="person" style={{ gridTemplateColumns: '90px 1fr' }}>
-                    <Img k={m.img} ratio="ratio-1" credit={false} alt="" />
+                    <button className="img-open" onClick={() => setOpen(m.id)} aria-label={`${m.name}: open enlarged image and details`}>
+                      <Img k={m.img} ratio="ratio-1" credit={false} alt="" />
+                    </button>
                     <div><button className="link-arrow" style={{ background: 'none', border: 0, padding: 0 }} onClick={() => setOpen(m.id)}>{m.name}</button><p className="small muted">{m.location} · {m.period}</p></div>
                   </li>
                 ))}

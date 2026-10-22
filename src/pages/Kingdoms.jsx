@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { IndiaMap } from '../components/maps.jsx';
 import { EVENTS, GANTT_ROWS, KINGDOMS } from '../data/kingdoms.js';
 import { useLang } from '../i18n.jsx';
@@ -123,8 +123,15 @@ function KingdomSection({ k }) {
         </div>
 
         <div className="mosaic mt-5">
-          <Img k={a.k} caption={a.cap} className="m-a" ratio="" zoom />
-          {rest.map((im, i) => <Img key={im.k} k={im.k} caption={im.cap} className={['m-b', 'm-c', 'm-c', 'm-b', 'm-d'][i] || 'm-c'} ratio="" zoom />)}
+          {[a, ...rest].map((im, i) => {
+            const pos = i === 0 ? 'm-a' : ['m-b', 'm-c', 'm-c', 'm-b', 'm-d'][i - 1] || 'm-c';
+            const [title, ...more] = im.cap.split(' — ');
+            return (
+              <ZoomImg key={im.k} k={im.k} caption={im.cap} className={pos} buttonClass={pos} ratio="" zoom portrait
+                title={title} eyebrow={`${k.name} · ${k.years}`}
+                info={more.length > 0 && <p>{more.join(' — ').replace(/^./, (c) => c.toUpperCase())}</p>} />
+            );
+          })}
         </div>
         <div className="mt-4"><Sources items={k.sources} /></div>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Img, NextChapter, Note, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Img, NextChapter, Note, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { KA_DISTRICTS, KA_OUTLINE, KA_REGIONS, KA_VIEW } from '../components/maps.jsx';
 import { REGIONS_1956, UNIFICATION_STAGES } from '../data/unification.js';
 import { SRC } from '../data/sources.js';
@@ -180,8 +180,12 @@ export default function Unification() {
           <div className="stack" style={{ position: 'sticky', top: 110 }}>
             <SectionHead eyebrow="Ekikarana · ಏಕೀಕರಣ" title="A movement, not a moment." lede="Unification was achieved through decades of persuasion — books, songs, newspapers, conferences and elected politics — by people from every Kannada region." />
             <div className="grid g2">
-              <Img k="aluru" ratio="ratio-3x4" caption="Aluru Venkata Rao" />
-              <Img k="nijalingappa" ratio="ratio-3x4" caption="S. Nijalingappa (postage stamp)" />
+              <ZoomImg k="aluru" ratio="ratio-3x4" caption="Aluru Venkata Rao" portrait
+                title="Aluru Venkata Rao" eyebrow="“Karnataka Kulapurohita”"
+                info={<p>His history Karnataka Gata Vaibhava (1917), on Karnataka’s past glory, inspired the idea of one Kannada land.</p>} />
+              <ZoomImg k="nijalingappa" ratio="ratio-3x4" caption="S. Nijalingappa (postage stamp)" portrait
+                title="S. Nijalingappa" eyebrow="Ekikarana movement"
+                info={<p>One of the leaders of the unification movement, he became chief minister of the enlarged Mysore State on 1 November 1956.</p>} />
             </div>
           </div>
           <ol className="vtl">

@@ -1,4 +1,4 @@
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { useLang } from '../i18n.jsx';
 import { SRC } from '../data/sources.js';
 
@@ -22,8 +22,10 @@ export default function Bhuvaneshwari() {
               lede="Bhuvaneshwari is often depicted as Kannada Thayi — the personification of the Kannada language and land. The image unites three different things that are worth keeping distinct: religious devotion, literary symbolism and civic identity." />
           </div>
           <Reveal>
-            <Img k="kannadaThayi" ratio="ratio-3x4" alt="Kannada Thayi (Bhuvaneshwari) seated on a throne holding the red-and-yellow Kannada flag"
-              caption="Kannada Thayi — Bhuvaneshwari with the Kannada flag (contemporary illustration)" />
+            <ZoomImg k="kannadaThayi" ratio="ratio-3x4" alt="Kannada Thayi (Bhuvaneshwari) seated on a throne holding the red-and-yellow Kannada flag"
+              caption="Kannada Thayi — Bhuvaneshwari with the Kannada flag (contemporary illustration)" portrait
+              title="Kannada Thayi" eyebrow="ಕನ್ನಡ ತಾಯಿ · Mother Kannada"
+              info={<p>Bhuvaneshwari is often depicted as Kannada Thayi — the personification of the Kannada language and land. The image unites three different things that are worth keeping distinct: religious devotion, literary symbolism and civic identity.</p>} />
           </Reveal>
         </div>
       </section>

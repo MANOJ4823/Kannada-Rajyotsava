@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 // Registered names, GI application numbers and registration years (financial year) as recorded by the
@@ -109,7 +109,14 @@ export default function GIPage() {
           <div className="grid g3" aria-live="polite">
             {list.map((g, i) => (
               <Reveal key={g.name} delay={i % 3} className="card">
-                <Img k={g.img} ratio="ratio-4x3" credit={false} alt={g.imgCap || g.name} placeholderNote="A verified photograph of this registered product was not available." />
+                <ZoomImg k={g.img} ratio="ratio-4x3" credit={false} alt={g.imgCap || g.name} placeholderNote="A verified photograph of this registered product was not available."
+                  title={g.name} eyebrow={`${g.type} · Registered GI`}
+                  info={<>
+                    <div className="small muted">{g.region}</div>
+                    <p><b>Distinctive:</b> {g.what}</p>
+                    <p><b>Method:</b> {g.how}</p>
+                    <p className="small muted">GI application no. {g.app} · registered {g.fy}{g.logo ? ` · GI logo also registered (application no. ${g.logo})` : ''}</p>
+                  </>} />
                 <div className="card-body">
                   <div className="row between"><div className="meta">{g.type}</div><span className="badge fact">Registered GI</span></div>
                   <h3 className="h4 mt-1">{g.name}</h3>

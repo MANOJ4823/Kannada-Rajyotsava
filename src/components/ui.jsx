@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import IMAGES from '../data/images.json';
 import { useLang } from '../i18n.jsx';
@@ -34,6 +35,32 @@ export function Img({ k, alt, caption, ratio = 'ratio-4x3', className = '', cred
         </figcaption>
       )}
     </figure>
+  );
+}
+
+/* Same image, but clicking it opens an enlarged view with details (layout of the Arts pop-up) */
+export function ZoomImg({ title, eyebrow, info, portrait = false, buttonClass = '', ...props }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button className={`img-open ${buttonClass}`} onClick={() => setOpen(true)} aria-label={`${title}: open enlarged image and details`}>
+        <Img {...props} />
+      </button>
+      {/* Rendered at the page root so a themed (dark) section never restyles the pop-up */}
+      {open && createPortal(
+        <Modal onClose={() => setOpen(false)} label={title}>
+          <div className="modal-grid">
+            <Img k={props.k} ratio="" caption={props.caption || props.alt} placeholderNote={props.placeholderNote} className={portrait ? 'pop-portrait' : ''} />
+            <div className="modal-body stack">
+              {eyebrow && <div className="eyebrow">{eyebrow}</div>}
+              <h2 className="h2">{title}</h2>
+              {info}
+            </div>
+          </div>
+        </Modal>,
+        document.getElementById('root') || document.body,
+      )}
+    </>
   );
 }
 

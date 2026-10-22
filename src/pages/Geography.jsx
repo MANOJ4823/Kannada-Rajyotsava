@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { KarnatakaMap, ZONES } from '../components/maps.jsx';
 import { SRC } from '../data/sources.js';
 
@@ -66,7 +66,14 @@ export default function Geography() {
             </div>
             {s && (
               <div className="stack" aria-live="polite">
-                <Img k={s.img} ratio="ratio-4x3" caption={s.imgCap || s.name} />
+                <ZoomImg k={s.img} ratio="ratio-4x3" caption={s.imgCap || s.name}
+                  title={s.name} eyebrow={s.cat}
+                  info={<>
+                    <div className="row"><span className="badge fact">{s.eco}</span></div>
+                    <p className="small muted" style={{ margin: 0 }}>District: {s.district}</p>
+                    <p>{s.d}</p>
+                    {s.special && <p className="small muted">Talakadu is a riverside landscape of wind-blown sand on the Kaveri’s banks, not a natural desert.</p>}
+                  </>} />
                 <div className="row"><span className="badge neutral">{s.cat}</span><span className="badge fact">{s.eco}</span></div>
                 <h2 className="h2">{s.name}</h2>
                 <p className="small muted" style={{ margin: 0 }}>District: {s.district}</p>

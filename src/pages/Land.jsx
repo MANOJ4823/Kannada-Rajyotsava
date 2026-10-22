@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Img, Note, NextChapter, PageHero, Reveal, SectionHead, Sources, Badge } from '../components/ui.jsx';
+import { Img, Note, NextChapter, PageHero, Reveal, SectionHead, Sources, Badge, ZoomImg } from '../components/ui.jsx';
 import { KarnatakaMap, MARKER_COLORS, ZONES } from '../components/maps.jsx';
 import { PLACES, placeById } from '../data/places.js';
 import { SRC } from '../data/sources.js';
@@ -127,7 +127,9 @@ export default function Land() {
         <div className="wrap split top">
           <SectionHead eyebrow="Deep time" title="The rocks are older than any story told about them." lede="Geological history is measured in billions of years; human history in thousands. Below, the first timeline is scientific evidence. The second is archaeology. Myths and legends — which matter deeply — are labelled as such wherever they appear." />
           <Reveal className="stack">
-            <Img k="stMarys" ratio="ratio-4x3" caption="Columnar basalt, St Mary’s Islands off Malpe (Udupi district)" />
+            <ZoomImg k="stMarys" ratio="ratio-4x3" caption="Columnar basalt, St Mary’s Islands off Malpe (Udupi district)"
+              title={DEEP_TIME[2].title} eyebrow={`Geology · ${DEEP_TIME[2].when}`}
+              info={<><p>{DEEP_TIME[2].body}</p><div><Badge kind={DEEP_TIME[2].kind} /></div></>} />
           </Reveal>
         </div>
         <div className="wrap mt-5 grid g2">
@@ -155,8 +157,12 @@ export default function Land() {
           </div>
         </div>
         <div className="wrap mt-5 grid g2">
-          <Img k="hireBenakal" ratio="ratio-16x9" caption="Megalithic structures at Hire Benakal, Koppal district" />
-          <Img k="mayurasharma" ratio="ratio-16x9" caption="Talagunda pillar inscription (3D scan) — a 5th-century Sanskrit record of the Kadamba founder Mayurasharma" />
+          <ZoomImg k="hireBenakal" ratio="ratio-16x9" caption="Megalithic structures at Hire Benakal, Koppal district"
+            title={HUMAN_TIME[2].title} eyebrow={`Archaeology · ${HUMAN_TIME[2].when}`}
+            info={<><p>{HUMAN_TIME[2].body}</p><div><Badge kind={HUMAN_TIME[2].kind} /></div></>} />
+          <ZoomImg k="mayurasharma" ratio="ratio-16x9" caption="Talagunda pillar inscription (3D scan) — a 5th-century Sanskrit record of the Kadamba founder Mayurasharma"
+            title="Talagunda pillar inscription" eyebrow="Inscription · 5th century"
+            info={<p>A Sanskrit record of the Kadamba founder Mayurasharma, composed generations after him. It describes a scholar who turned to arms and founded a kingdom in the forested west of the Deccan — the start of Karnataka’s recorded political history.</p>} />
         </div>
       </section>
 
@@ -174,7 +180,8 @@ export default function Land() {
           <div className="grid g4 mt-4">
             {SHAPES.map((s, i) => (
               <Reveal key={s.t} delay={i % 3} className="card">
-                <Img k={s.k} ratio="ratio-4x3" credit={false} alt={s.t} />
+                <ZoomImg k={s.k} ratio="ratio-4x3" credit={false} alt={s.t}
+                  title={s.t} eyebrow="How the land shaped life" info={<p>{s.b}</p>} />
                 <div className="card-body"><h3 className="h4">{s.t}</h3><p className="mt-1">{s.b}</p></div>
               </Reveal>
             ))}
@@ -195,7 +202,9 @@ export default function Land() {
               ))}
             </div>
             <div className="stack">
-              <Img k="tungabhadra" ratio="ratio-4x3" caption="The Tungabhadra at Hampi" />
+              <ZoomImg k="tungabhadra" ratio="ratio-4x3" caption="The Tungabhadra at Hampi"
+                title={RIVERS[1].name} eyebrow="Rivers"
+                info={<><div className="kn-serif" style={{ color: 'var(--copper)', fontSize: '1.3rem' }} lang="kn">{RIVERS[1].kn}</div><p>{RIVERS[1].body}</p></>} />
               <Note kind="tradition" title="Science and story, side by side">
                 Many places carry sacred stories — the Kaveri’s origin at Talakaveri is linked to the sage Agastya, and the Hampi landscape is identified in tradition with Kishkindha of the Ramayana. These are living traditions, not geological or archaeological findings, and we present them as such.
               </Note>
