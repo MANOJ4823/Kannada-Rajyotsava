@@ -20,6 +20,23 @@ const SECTORS = [
   { t: 'Cinema, music & contemporary arts', img: 'rajkumar', cap: 'Dr. Rajkumar on a 2009 postage stamp', d: 'Kannada cinema, independent music, theatre, literature festivals and design studios — a creative economy as well as a cultural one.' },
 ];
 
+const GOLD = [
+  { name: 'Kolar Gold Fields (KGF)', place: 'Kolar district · Kolar Schist Belt', status: 'Mining ended in 2001', img: 'kgfShaft', cap: 'Shaft head at Champion Reef mine, Kolar Gold Fields',
+    d: 'Gold-bearing quartz veins run through the ancient Kolar Schist Belt. Long before modern times, local miners had dug workings close to 300 feet deep. Modern mining began in 1881 and grew under the London firm of John Taylor & Sons; from 1902 the mines ran on electricity from the Shivanasamudra hydroelectric station on the Kaveri. The Mysore government took the mines over in 1956, later passing them to Bharat Gold Mines Limited, and mining stopped in 2001.',
+    facts: [
+      'The workings eventually reached about 3 km below the surface, among the deepest mines in the world.',
+      'In 1965 physicists from India, Britain and Japan, working 2.3 km underground at KGF, recorded some of the first neutrinos produced by cosmic rays in the atmosphere.',
+      'The township grew with families from many regions, especially Tamil-speaking workers from Madras Presidency.',
+    ] },
+  { name: 'Hutti Gold Mines', place: 'Lingsugur taluk, Raichur district · Hutti–Maski greenstone belt', status: 'Still producing gold', img: 'huttiMap', cap: 'Raichur district, home of the Hutti Gold Mines (no openly licensed photograph of the mine is available)',
+    d: 'Miners worked Hutti in antiquity, breaking the rock by heating it with fire. Modern mining in what was then Hyderabad State stopped around 1920. The Hyderabad Gold Mines Company, formed in 1947, was renamed The Hutti Gold Mines Company Limited in 1956, after the reorganisation of states. Owned by the Government of Karnataka, it is India’s longest-running working gold mine and for decades has been the country’s main source of mined gold.',
+    facts: [
+      'The company reports that timber from the old workings has been radiocarbon-dated to about 1,900 years ago.',
+      'It produced about 1.69 tonnes of gold in 2025–26, according to the company.',
+      'Its deepest shaft goes down more than 900 m.',
+    ] },
+];
+
 export default function Economy() {
   return (
     <>
@@ -55,6 +72,28 @@ export default function Economy() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap">
+          <SectionHead eyebrow="Gold" title="Two historic goldfields." lede="Some of Karnataka’s oldest rocks hold gold. Kolar and Hutti were mined long before modern times, then became industrial mines; one is closed, the other still produces." />
+          <div className="grid g2 mt-4">
+            {GOLD.map((g, i) => (
+              <Reveal key={g.name} delay={i} className="card">
+                <Img k={g.img} ratio="ratio-16x9" credit={false} alt={g.cap} placeholderNote="Openly licensed photograph not available." />
+                <div className="card-body">
+                  <div className="tiny muted" style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>{g.place}</div>
+                  <h3 className="h4 mt-1">{g.name}</h3>
+                  <p className="mt-1">{g.d}</p>
+                  <ul className="mt-1">{g.facts.map((f) => <li key={f} className="small">{f}</li>)}</ul>
+                  <p className="small" style={{ color: 'var(--copper)', marginTop: 6 }}>{g.status}</p>
+                  <p className="tiny muted" style={{ margin: '10px 0 0' }}>Image: {g.cap}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Note kind="interpretation" title="Dates and depths">The age of the earliest workings is hard to pin down: Kolar’s old workings are undated, and Hutti’s date of about 1,900 years comes from the company’s own report. Figures for KGF’s total gold output differ between sources, so we leave them out.</Note>
+        </div>
+      </section>
+
       <section className="section theme-night grain">
         <div className="wrap split">
           <Reveal className="stack">
@@ -71,7 +110,9 @@ export default function Economy() {
         </div>
       </section>
       <section className="section tight"><div className="wrap">
-        <Sources items={[SRC.canara, SRC.karnatakaBank, SRC.rbi, SRC.hal, SRC.isro, SRC.W('Syndicate Bank'), SRC.W('Corporation Bank'), SRC.W('Vijaya Bank'), SRC.W('State Bank of Mysore'), SRC.W('Ideal Ice Cream'), SRC.W('Naturals (ice cream)')]} />
+        <Sources items={[SRC.canara, SRC.karnatakaBank, SRC.rbi, SRC.hal, SRC.isro, SRC.W('Syndicate Bank'), SRC.W('Corporation Bank'), SRC.W('Vijaya Bank'), SRC.W('State Bank of Mysore'), SRC.W('Ideal Ice Cream'), SRC.W('Naturals (ice cream)'),
+          SRC.W('Kolar Gold Fields'), SRC.W('Bharat Gold Mines Limited'), SRC.W('Particle experiments at Kolar Gold Fields'), SRC.W('Hutti Gold Mines Limited'),
+          { label: 'Hutti Gold Mines Company — history of the mine', url: 'https://huttigold.karnataka.gov.in/58/history-of-mine/en', kind: 'Official' }]} />
       </div></section>
       <NextChapter path="/economy" />
     </>

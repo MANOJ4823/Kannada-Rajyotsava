@@ -41,12 +41,16 @@ function ScriptExplorer({ voice }) {
           <p className="prose">Kannada is an <i>abugida</i>: each consonant carries an inherent “a”, and vowel signs attach to it. Choose a consonant to see all its forms — this table, the <i>kāguṇita</i>, is how children learn to read.</p>
           <div className="pill-row">
             {['ಕ', 'ಗ', 'ತ', 'ನ', 'ಪ', 'ಮ', 'ರ', 'ಲ', 'ಸ', 'ಹ'].map((c) => <button key={c} className="chip kn-serif" style={{ fontSize: '1.2rem' }} aria-pressed={cons === c} onClick={() => setCons(c)}>{c}</button>)}
+            <SpeakButton text={VOWEL_SIGNS.map(([sign]) => cons + sign).join(', ')} voice={voice} />
           </div>
           <div className="script-grid">
-            {VOWEL_SIGNS.map(([sign, v]) => (
+            {VOWEL_SIGNS.map(([sign, v]) => voice.available ? (
+              <button key={v} className="glyph" lang="kn" onClick={() => voice.speak(cons + sign)} aria-label={`Hear ${cons + sign}, ${consRoman}${v}`}>{cons + sign}<small>{consRoman}{v}</small></button>
+            ) : (
               <div key={v} className="glyph" lang="kn">{cons + sign}<small>{consRoman}{v}</small></div>
             ))}
           </div>
+          {voice.available && <p className="tiny muted" style={{ margin: 0 }}>Select any syllable to hear it, or Listen for the whole row.</p>}
         </div>
       )}
       <p className="tiny muted">Kannada script descends from the Brahmi family through the Kadamba and later Chalukya scripts, and shares its ancestry with the Telugu script.</p>

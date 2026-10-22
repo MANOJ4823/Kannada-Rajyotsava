@@ -3,7 +3,6 @@ import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Tabs } 
 import { SRC } from '../data/sources.js';
 
 const NO_PORTRAIT = 'No contemporary portrait survives. We show no invented likeness.';
-
 const GROUPS = {
   rulers: {
     label: 'Historical rulers & leaders',
@@ -33,14 +32,20 @@ const GROUPS = {
         body: 'As chief engineer he led the Krishna Raja Sagara dam project on the Kaveri; he designed automatic sluice gates, advised on flood protection for Hyderabad after the 1908 floods, and as Diwan of Mysore (1912–1918) promoted industries, banking and technical education. India marks Engineers’ Day on his birthday, 15 September. Many public works of his era were the work of large teams; we credit him with the roles he actually held.' },
       { name: 'C. N. R. Rao', when: 'b. 1934', role: 'Chemist · Bharat Ratna 2014', img: 'cnrRao', cap: 'C. N. R. Rao',
         body: 'Bengaluru-born scientist known for solid-state and materials chemistry, long associated with the Indian Institute of Science and the Jawaharlal Nehru Centre for Advanced Scientific Research.' },
+      { name: 'K. Kasturirangan', when: '1940–2025', role: 'Space scientist, ISRO chairman 1994–2003 · Padma Vibhushan 2000', img: 'kasturirangan', cap: 'K. Kasturirangan at the Indian Institute of Science, 2010',
+        body: 'Born in Ernakulam, Kerala, he spent most of his career in Bengaluru, directing the ISRO Satellite Centre and the Bhaskara satellite projects before leading ISRO from 1994 to 2003. He later directed the National Institute of Advanced Studies in Bengaluru and chaired the committee that drafted the National Education Policy 2020. He also received the Padma Shri (1982) and the Padma Bhushan (1992).' },
       { name: 'N. R. Narayana Murthy', when: 'b. 1946', role: 'Co-founder, Infosys · Padma Vibhushan 2008', img: 'narayanaMurthy', cap: 'N. R. Narayana Murthy',
         body: 'Co-founded Infosys in 1981 with six colleagues and led it as chief executive until 2002, helping define India’s software-services industry from Bengaluru.' },
       { name: 'Sudha Murty', when: 'b. 1950', role: 'Engineer, author, philanthropist · Padma Bhushan 2023', img: 'sudhaMurty', cap: 'Sudha Murty',
         body: 'Became the first woman engineer hired by TELCO; later chaired the Infosys Foundation, supporting education, health and libraries. A prolific author in Kannada and English, she was nominated to the Rajya Sabha in 2024. Her work is distinct from her husband’s role at Infosys.' },
+      { name: 'Kiran Mazumdar-Shaw', when: 'b. 1953, Bengaluru', role: 'Founder, Biocon · Padma Shri 1989 · Padma Bhushan 2005', img: 'kiranMazumdar', cap: 'Kiran Mazumdar-Shaw, 2014',
+        body: 'Trained as a brewer in Australia, she founded Biocon in Bengaluru in 1978, starting in a rented garage. It grew from an enzymes maker into a major biopharmaceutical company, and in 2004 became the first Indian biotechnology company to offer its shares to the public. Through the Biocon Foundation and the Mazumdar-Shaw Medical Foundation she has supported low-cost clinics and cancer care.' },
       { name: 'Nithin Kamath & Nikhil Kamath', when: 'Zerodha, founded 2010', role: 'Fintech entrepreneurs, Bengaluru', img: 'nithinKamath', cap: 'Nithin Kamath', img2: 'nikhilKamath', cap2: 'Nikhil Kamath',
         body: 'The brothers co-founded Zerodha, a Bengaluru-based brokerage that brought low-cost online investing to millions, and the Rainmatter initiatives supporting fintech and climate start-ups.' },
       { name: 'Saalumarada Thimmakka', when: 'Hulikal, Ramanagara district', role: 'Environmentalist · Padma Shri 2019', img: 'thimmakka', cap: 'Saalumarada Thimmakka, 2011',
         body: 'With her husband Bikkala Chikkaiah, she planted and nurtured hundreds of banyan saplings along the road between Hulikal and Kudur, carrying water to them over years. “Saalumarada” means “of the row of trees” — a name the public gave her.' },
+      { name: 'Anke Gowda', when: 'b. c. 1947, Pandavapura (Mandya district)', role: 'Book collector, founder of Pustaka Mane · Padma Shri 2026', img: 'ankeGowda', cap: 'Anke Gowda with an 1838 Kannada–English dictionary at Pustaka Mane, 2012',
+        body: 'A former bus conductor and sugar-factory timekeeper, he spent much of his income over five decades buying books. His collection, reported at about two million volumes, is open free of charge in Pustaka Mane (“House of Books”) at Pandavapura. He was named for the Padma Shri in 2026 for promoting literacy and learning.' },
     ],
   },
   arts: {
@@ -55,6 +60,16 @@ const GROUPS = {
         body: 'Dharwad, Hubballi and Gadag gave Hindustani music some of its greatest voices — Bhimsen Joshi (Bharat Ratna 2008), Gangubai Hangal, Mallikarjun Mansur and Basavaraj Rajguru — a reminder that Karnataka lives in both Carnatic and Hindustani traditions.' },
       { name: 'R. K. Laxman', when: '1921–2015', role: 'Cartoonist, born in Mysuru', img: 'rkLaxmanPortrait', cap: 'R. K. Laxman',
         body: 'Creator of “The Common Man”, whose daily cartoon observed Indian public life for more than five decades.' },
+      { name: 'Jakanachari', when: 'Legendary · c. 11th–12th century by tradition', role: '“Amarashilpi” — the legendary master sculptor', img: 'jakanachariPortrait', cap: 'Jakanachari — artistic depiction (no contemporary likeness exists)',
+        body: 'Kannada tradition credits Jakanachari with many temples of the Kalyani Chalukya and Hoysala periods, though no inscription confirms him as a historical person; the sculptors actually named in Hoysala inscriptions include Mallitamma and Dasoja. Legend says his lost hand was restored after he built the Chennakeshava temple at his native Kridapura, renamed Kaidala (“kai” means hand). Karnataka’s Jakanachari Award for sculptors and craftsmen is named after him.' },
+      { name: 'T. Chowdiah', when: '1895–1967', role: 'Carnatic violinist · Sangita Kalanidhi 1957', img: 'chowdiahPortrait', cap: 'T. Chowdiah playing the violin',
+        body: 'Born at Tirumakudalu Narasipura near Mysuru, he was a leading accompanist to the great Carnatic vocalists before becoming a soloist and a court musician in Mysore. He devised a seven-string violin to carry sound in large halls before amplification, and composed under the name “Trimakuta”. He founded the Ayyanar College of Music in Bangalore in 1952; the violin-shaped Chowdiah Memorial Hall is named after him.' },
+      { name: 'Puttanna Kanagal', when: '1933–1985', role: 'Film director · National Film Awards for Gejje Pooje and Sharapanjara', img: 'puttannaPortrait', cap: 'Puttanna Kanagal',
+        body: 'After assisting B. R. Panthulu, he directed his first Kannada film, Belli Moda, in 1967. Gejje Pooje won National Film Awards for the best Kannada film and for its screenplay, and Sharapanjara also won the best Kannada film award. His films, often centred on women and adapted from Kannada novels, include Naagarahaavu and Ranganayaki, and gave early roles to actors such as Vishnuvardhan and Ambareesh.' },
+      { name: 'P. Lankesh', when: '1935–2000', role: 'Writer, film-maker and editor · Sahitya Akademi Award 1993', img: 'lankeshPortrait', cap: 'P. Lankesh',
+        body: 'A short-story writer, novelist, playwright and poet from Shivamogga district, he won the Sahitya Akademi Award for the story collection Kallu Karaguva Samaya. His film Pallavi (1976) won the National Film Award for Best Direction. In 1980 he left teaching English at Bangalore University to found Lankesh Patrike, an advertisement-free weekly he edited until his death.' },
+      { name: 'M. V. Kamath', when: '1921–2014', role: 'Journalist and author · Padma Bhushan 2004', img: 'kamathPortrait', cap: 'M. V. Kamath',
+        body: 'Born in Udupi, he was Washington correspondent of The Times of India, edited The Illustrated Weekly of India and later chaired Prasar Bharati, India’s public broadcaster. He wrote more than 50 books, and from 1997 was honorary director of the School of Communication at Manipal.' },
     ],
   },
   sport: {
@@ -65,6 +80,12 @@ const GROUPS = {
         body: 'India’s highest Test wicket-taker with 619 wickets. In 1999 at Delhi he took all ten wickets in a Test innings against Pakistan — only the second bowler ever to do so.' },
       { name: 'Prakash Padukone', when: 'b. 1955', role: 'Badminton player', img: 'padukone', cap: 'Prakash Padukone',
         body: 'Won the All England Championships in 1980, the first Indian to do so, and later co-founded a leading badminton academy in Bengaluru.' },
+      { name: 'Ashwini Ponnappa', when: 'b. 1989, Bengaluru', role: 'Badminton doubles player · Arjuna Award 2012', img: 'ashwiniPonnappa', cap: 'Ashwini Ponnappa at the 2010 Commonwealth Games, New Delhi',
+        body: 'With Jwala Gutta she won women’s doubles gold at the 2010 Commonwealth Games in Delhi, and in 2011 the pair took bronze at the World Championships in London, becoming the first Indian pair to win a World Championships medal. She has played at three Olympic Games: 2012, 2016 and 2024.' },
+      { name: 'M. R. Poovamma', when: 'b. 1990, Gonikoppal (Kodagu)', role: 'Sprinter (400 m) · Arjuna Award 2015', img: 'poovamma', cap: 'M. R. Poovamma at the 2017 Asian Athletics Championships, Bhubaneswar',
+        body: 'She won 4×400 m relay gold at the Asian Games in 2014 (Incheon) and 2018 (Jakarta), along with individual 400 m bronze in 2014. She also won relay gold at the Asian Athletics Championships in 2013 and 2017, and ran in India’s women’s relay team at the 2016 Rio Olympics.' },
+      { name: 'Shreyanka Patil', when: 'b. 2002, Bengaluru', role: 'Cricketer (off-spinning all-rounder) · WPL Purple Cap and Emerging Player of the Season 2024', img: 'shreyankaPortrait', cap: 'Shreyanka Patil with the Women’s Premier League trophy',
+        body: 'She has played for Karnataka since 2019 and for Royal Challengers Bengaluru in the Women’s Premier League since its first season in 2023. In 2024 she was the league’s leading wicket-taker with 13 wickets, including 4/12 in the final, as the team won its first title; it won again in 2026. She made her debut for India in December 2023, played at the 2024 and 2026 Women’s T20 World Cups, and was in the India squad that won gold at the 2026 Asian Games.' },
     ],
   },
   reform: {
@@ -73,10 +94,62 @@ const GROUPS = {
     people: [
       { name: 'Rani Abbakka Chowta', when: '16th century', role: 'Queen of Ullal', img: 'abbakka', cap: 'Rani Abbakka on a 2023 Indian postage stamp',
         body: 'Led resistance against Portuguese attempts to control the coastal trade around Mangaluru.' },
+      { name: 'Rani Chennabhairadevi', when: 'r. c. 1552–1606 (traditional dates)', role: 'Queen of Gerusoppa · Called “Rainha da Pimenta” (Pepper Queen) by the Portuguese', img: 'chennabhairadeviPortrait', cap: 'Rani Chennabhairadevi — artistic depiction (no contemporary portrait survives)',
+        body: 'A Jain queen of the Saluva line, she governed Gerusoppa (Nagire) under the Karnata (Vijayanagara) empire. Its ports, among them Honnavar and Bhatkal, shipped pepper to Arab and European merchants, and she clashed with the Portuguese in 1559 and 1570. Tradition holds that she was finally defeated by the chiefs of Keladi and Bilgi and died a prisoner at Keladi.' },
+      { name: 'Keladi Chennamma', when: 'r. 1672–1697 (some sources end her reign in 1696)', role: 'Queen of the Keladi (Ikkeri) Nayaka kingdom', img: 'keladiChennammaPortrait', cap: 'Keladi Chennamma — artistic depiction (no contemporary portrait survives)',
+        body: 'After her husband Somashekhara Nayaka died in 1672 she ruled from Bidanur for about 25 years, and adopted Basavappa Nayaka, who succeeded her. In 1689 she gave the Maratha prince Rajaram safe passage as he fled the Mughals towards Jinji, and withstood the Mughal forces sent against her kingdom afterwards.' },
       { name: 'Kittur Rani Chennamma', when: '1778–1829', role: 'Queen of Kittur', img: 'chennamma', cap: 'Kittur Rani Chennamma (statue)',
         body: 'In 1824 she took up arms when the East India Company refused to recognise her adopted son. She died in captivity at Bailhongal; her lieutenant Sangolli Rayanna continued the fight.' },
+      { name: 'Sangolli Rayanna', when: '1798–1831', role: 'Commander of Kittur’s forces', img: 'rayannaPortrait', cap: 'Sangolli Rayanna — artistic depiction (no contemporary portrait survives)',
+        body: 'Born at Sangolli in Belagavi district, he fought for Kittur in 1824. From 1829 he led a guerrilla campaign against Company rule, seeking to place Chennamma’s adopted son on the throne. Captured in 1830, he was hanged near Nandagad on 26 January 1831. Bengaluru’s main railway station is named after him.' },
       { name: 'Kudmul Ranga Rao', when: '1859–1928', role: 'Social reformer, Mangaluru', img: 'kudmulPortrait', cap: 'Kudmul Ranga Rao (portrait painting)',
         body: 'Founded the Depressed Classes Mission in Mangaluru (1897), opening schools and hostels for children of oppressed castes.' },
+    ],
+  },
+  medicine: {
+    label: 'Medicine',
+    intro: 'Doctors who made specialist heart care affordable for ordinary patients.',
+    people: [
+      { name: 'Dr. Devi Shetty', when: 'b. 1953, Kinnigoli (Dakshina Kannada)', role: 'Cardiac surgeon, founder of Narayana Health · Padma Shri 2004 · Padma Bhushan 2012', img: 'deviShetty', cap: 'Dr. Devi Shetty, 2013',
+        body: 'Trained at Kasturba Medical College, Mangaluru, and in England, he founded Narayana Hrudayalaya (now Narayana Health) in Bengaluru in 2001. Its high-volume approach to heart surgery became known worldwide for bringing down costs. He also received the Karnataka Ratna (2001) and the Dr. B. C. Roy Award (2003).' },
+      { name: 'Dr. C. N. Manjunath', when: 'b. 1957, Hassan district', role: 'Cardiologist, former director of the Jayadeva Institute · Padma Shri 2007', img: 'manjunathPortrait', cap: 'Dr. C. N. Manjunath',
+        body: 'Cholenahalli Nanjappa Manjunath joined the state-run Sri Jayadeva Institute of Cardiovascular Sciences and Research in Bengaluru in 1988 and was its director from 2006 for about 18 years, a period in which it grew substantially and opened branches in Mysuru and Kalaburagi. The institute became known for affordable cardiac care. In 2024 he was elected to the Lok Sabha from Bangalore Rural.' },
+    ],
+  },
+  forces: {
+    label: 'Armed forces',
+    intro: 'Officers from Karnataka, several of them from the Kodava community of Kodagu, who reached the highest ranks of India’s armed forces.',
+    people: [
+      { name: 'Field Marshal K. M. Cariappa', when: '1899–1993', role: 'First Indian Commander-in-Chief of the Indian Army · Field Marshal 1986', img: 'cariappa', cap: 'General K. M. Cariappa (official portrait)',
+        body: 'Born in Kodagu and commissioned in 1919, he was among the first Indian officers of the Indian Army and the first Indian to command a battalion; he was appointed OBE in 1945. He commanded Indian forces on the Western Front in 1947–48, and on 15 January 1949 took over as Commander-in-Chief, the date India now marks as Army Day. He was later High Commissioner to Australia and New Zealand, and was made a Field Marshal in 1986.' },
+      { name: 'General K. S. Thimayya', when: '1906–1965', role: 'Chief of the Army Staff 1957–61 · DSO 1945 · Padma Bhushan 1954', img: 'thimayya', cap: 'General K. S. Thimayya (official portrait)',
+        body: 'Born in Madikeri, he was the only Indian to command an infantry brigade in battle in the Second World War, in Burma, and led the 19th Infantry Division in Jammu and Kashmir in 1948. In 1953 he chaired the Neutral Nations Repatriation Commission in Korea. After serving as Chief of the Army Staff he commanded the UN peacekeeping force in Cyprus from 1964 until his death there in 1965.' },
+      { name: 'Air Marshal C. D. Subbaiah', when: 'b. 1924', role: 'Fighter pilot · Vir Chakra (1948 operations) · PVSM 1972', img: 'subbaiahPortrait', cap: 'Air Marshal C. D. Subbaiah',
+        body: 'Cheppudira Devaiah Subbaiah (spelt “Subia” in official records) was commissioned in the Indian Air Force in 1942 and flew in the Second World War. In the 1947–48 Kashmir operations he flew more than 70 sorties in about six weeks in support of the capture of Gurais, earning the Vir Chakra. He was Senior Air Staff Officer of Western Air Command during the 1971 war, and retired as an Air Marshal after heading Maintenance Command (1977–78).' },
+      { name: 'Lt. Gen. B. C. Nanda', when: '1931–2018', role: 'GOC-in-C, Northern Command 1987–89 · PVSM 1987 · AVSM 1982', img: 'nandaPortrait', cap: 'Lt. Gen. B. C. Nanda',
+        body: 'Biddanda Chengappa Nanda, a nephew of Field Marshal Cariappa, was commissioned into the Mahar Regiment in 1951 and served in the Goa (1961) and Bangladesh (1971) operations. He commanded II Corps and then the Army’s Northern Command. Retiring to Madikeri, he led the Coorg Wildlife Society and worked for conservation in the Western Ghats.' },
+    ],
+  },
+  saints: {
+    label: 'Saints, seers & philosophers',
+    intro: 'Teachers whose ideas and institutions shaped religious and social life in Karnataka and far beyond. Dates for medieval figures are often traditional.',
+    people: [
+      { name: 'Madhvacharya', when: 'c. 1238–1317 (another chronology: 1199–1278)', role: 'Philosopher; founder of the Dvaita school of Vedanta', img: 'madhvaPortrait', cap: 'Madhvacharya — artistic depiction (no contemporary likeness exists)',
+        body: 'Born, by tradition, at Pajaka near Udupi, he wrote commentaries on the Upanishads, the Bhagavad Gita and the Brahma Sutras; tradition credits him with 37 works. He taught that the individual soul and Brahman are eternally distinct, and founded the Krishna Matha at Udupi, still the centre of the Madhva tradition.' },
+      { name: 'Vidyaranya', when: 'd. 1386', role: 'Head of the Sringeri Sharada Peetham; Advaita scholar', img: 'vidyaranyaPortrait', cap: 'Vidyaranya — artistic depiction (no contemporary likeness exists)',
+        body: 'Head of the Sringeri matha in the late 14th century, he is credited with the Panchadashi, an important Advaita text. Tradition holds that he guided Harihara and Bukka in founding the Karnata (Vijayanagara) empire around 1336; historians debate how much of this story is later legend.' },
+      { name: 'Sri Sri Sri Shivakumara Swamiji', when: '1907–2019', role: 'Head of Siddaganga Matha, Tumakuru · Karnataka Ratna 2007 · Padma Bhushan 2015', img: 'shivakumaraSwami', cap: 'Sri Shivakumara Swamiji at Siddaganga Matha, 2007',
+        body: 'Born at Veerapura near Magadi, he led the Siddaganga Matha from 1941 until his death at the reported age of 111. The matha’s education society runs more than a hundred institutions, and its residential school has given thousands of children free food, schooling and shelter regardless of caste or creed, the tradition of trividha dasoha. Devotees called him “Nadedaaduva Devaru”, the walking god.' },
+    ],
+  },
+  law: {
+    label: 'Law & justice',
+    intro: 'A father and daughter from Karnataka at the summit of India’s judiciary.',
+    people: [
+      { name: 'Justice E. S. Venkataramiah', when: '1924–1997', role: '19th Chief Justice of India, 1989', img: 'esVenkataramiah', cap: 'Justice E. S. Venkataramiah (official portrait)',
+        body: 'Schooled at Pandavapura and Mysore, he practised in Bangalore, became Advocate General of Mysore and joined the Karnataka High Court in 1970. Appointed to the Supreme Court in 1979, he was Chief Justice of India from June to December 1989, the first from Karnataka to hold the office.' },
+      { name: 'Justice B. V. Nagarathna', when: 'b. 1962, Bengaluru', role: 'Judge of the Supreme Court of India since 2021', img: 'bvNagarathna', cap: 'Justice B. V. Nagarathna (official portrait)',
+        body: 'Daughter of Justice Venkataramiah, she practised law in Bengaluru from 1987 and served on the Karnataka High Court from 2008. Raised to the Supreme Court in 2021, she was the lone dissenting judge when a five-judge bench upheld the 2016 demonetisation in 2023. By seniority she is in line to become India’s first woman Chief Justice in September 2027, for about five weeks before she retires.' },
     ],
   },
 };
@@ -94,6 +167,7 @@ function Person({ p }) {
         <div className="role">{p.role}</div>
         <p>{p.body}</p>
         {p.cap && <p className="tiny muted mt-1" style={{ margin: '8px 0 0' }}>Image: {p.cap}{p.cap2 ? `; ${p.cap2}` : ''} — credits on the Sources page.</p>}
+        {!p.cap && p.note && <p className="tiny muted mt-1" style={{ margin: '8px 0 0' }}>Image: {p.note}</p>}
       </div>
     </Reveal>
   );
@@ -116,7 +190,12 @@ export default function People() {
             </div>
             <div>{group.people.map((p) => <Person key={p.name} p={p} />)}</div>
           </div>
-          <div className="mt-5"><Sources items={[SRC.padma, SRC.dff, SRC.pib, SRC.kamath, SRC.W('M. Visvesvaraya'), SRC.W('Saalumarada Thimmakka'), SRC.W('Arun Yogiraj'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Anil Kumble')]} /></div>
+          <div className="mt-5"><Sources items={[SRC.padma, SRC.dff, SRC.pib, SRC.kamath, SRC.W('M. Visvesvaraya'), SRC.W('Saalumarada Thimmakka'), SRC.W('Arun Yogiraj'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Anil Kumble'),
+            SRC.W('Rani Chennabhairadevi'), SRC.W('Keladi Chennamma'), SRC.W('Sangolli Rayanna'), SRC.W('Madhvacharya'), SRC.W('Vidyaranya'), SRC.W('Jakanachari'), SRC.W('Shivakumara Swami'),
+            SRC.W('K. M. Cariappa'), SRC.W('Kodandera Subayya Thimayya'), SRC.W('C. D. Subbaiah'), SRC.W('Biddanda Chengappa Nanda'),
+            SRC.W('Kiran Mazumdar-Shaw'), SRC.W('K. Kasturirangan'), SRC.W('Anke Gowda'), SRC.W('Devi Shetty'), SRC.W('C. N. Manjunath'),
+            SRC.W('E. S. Venkataramiah'), SRC.W('B. V. Nagarathna'), SRC.W('Puttanna Kanagal'), SRC.W('P. Lankesh'), SRC.W('M. V. Kamath'), SRC.W('Chowdiah'),
+            SRC.W('Ashwini Ponnappa'), SRC.W('Poovamma Machettira'), SRC.W('Shreyanka Patil')]} /></div>
         </div>
       </section>
       <NextChapter path="/people" />

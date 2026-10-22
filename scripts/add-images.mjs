@@ -59,6 +59,20 @@ const ADD = {
   giLambani: 'Lambani embroidery.JPG',
   giChikmagalurCoffee: 'Traditional shade coffee plantation Chikmagalur 1.jpg',
   giBababudangiri: 'Baba Budangiri, Chikmagalur (2024) 74.jpg',
+  cariappa: 'General K. M. Cariappa.jpg',
+  thimayya: 'General Kodandera Subayya Thimayya.jpg',
+  ashwiniPonnappa: 'Ashwini Ponnappa CWG.jpg',
+  poovamma: 'M. R. Poovamma (cropped).jpg',
+  kiranMazumdar: 'Kiran Mazumdar-Shaw HD2014 crop.jpg',
+  deviShetty: 'Devi Shetty.jpg',
+  kasturirangan: 'Kasturirangan at IISc (3x4 cropped).jpg',
+  ankeGowda: 'Anke Gowda pictured in 2012.jpg',
+  shivakumaraSwami: 'Shivakumara Swami.png',
+  esVenkataramiah: 'Justice E.S. Venkataramiah.jpg',
+  bvNagarathna: 'Justice BV Nagarathna.jpg',
+  kgfShaft: 'Champion Reef Mine shaft.jpg',
+  kgfMine: 'KGF mine.jpg',
+  huttiMap: 'Raichur in Karnataka (India).svg',
 };
 
 const UA = 'NammaKarnatakaRajyotsava/1.0 (educational office celebration site)';

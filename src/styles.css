@@ -492,6 +492,9 @@ input[type='range'].year-range::-moz-range-thumb { width: 18px; height: 18px; bo
 .person { display: grid; grid-template-columns: 112px 1fr; gap: 18px; align-items: start; padding: 20px 0; border-top: 1px solid var(--line); }
 .person .fig .frame { aspect-ratio: 1; border-radius: 999px; }
 .person h3 { font-size: 1.3rem; }
+.person .placeholder { padding: 8px; }
+.person .placeholder > div { display: none; }
+.person .placeholder::after { content: 'No photo'; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; }
 .person .role { font-size: 0.8rem; color: var(--copper); font-weight: 600; letter-spacing: 0.04em; margin: 4px 0 8px; }
 .person p { margin: 0; font-size: 0.95rem; color: var(--ink-2); }
 .theme-night .person, .theme-indigo .person { border-color: var(--line-light); }
@@ -540,7 +543,7 @@ input[type='range'].year-range::-moz-range-thumb { width: 18px; height: 18px; bo
 .phrase .kn-text { font-family: var(--kn-serif); font-size: 1.5rem; line-height: 1.3; }
 .phrase .tr { font-style: italic; color: var(--copper); }
 .phrase .en { color: var(--muted); font-size: 0.94rem; }
-.speak { border: 1px solid var(--line); background: #fff; border-radius: 99px; padding: 8px 14px; font-size: 0.82rem; display: inline-flex; gap: 6px; align-items: center; }
+.speak { border: 1px solid var(--line); background: #fff; color: var(--ink); border-radius: 99px; padding: 8px 14px; font-size: 0.82rem; display: inline-flex; gap: 6px; align-items: center; }
 .speak:hover { border-color: var(--copper); color: var(--copper); }
 
 /* ---------- Quiz ---------- */
