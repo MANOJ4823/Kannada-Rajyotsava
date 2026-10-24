@@ -81,7 +81,7 @@ export const KINGDOMS = [
     rulers: ['Dantidurga (founder)', 'Krishna I, r. c. 756–774', 'Govinda III', 'Amoghavarsha I, r. 814–878', 'Krishna III'],
     states: ['Karnataka', 'Maharashtra', 'Telangana', 'Andhra Pradesh', 'Madhya Pradesh', 'Gujarat'], markers: ['malkhed', 'ellora'],
     summary: 'The Rashtrakutas overthrew the Badami Chalukyas and became one of the most powerful dynasties in the subcontinent, campaigning from the Ganga plains to the far south.',
-    story: 'The Kailasa Temple at Ellora — carved downward and inward from a single basalt hill — is associated with Krishna I. It lies in present-day Maharashtra, a reminder that the historical world of Karnataka’s dynasties did not follow today’s state borders. The Arab merchant-writer Sulaiman, writing in the mid-9th century, counted the Rashtrakuta king among the four great sovereigns of the world.',
+    story: '**The Kailasa Temple at Ellora — carved downward and inward from a single basalt hill, a monolith with few parallels anywhere in the world** — is associated with Krishna I. It lies in present-day Maharashtra, a reminder that the historical world of Karnataka’s dynasties did not follow today’s state borders. The Arab merchant-writer Sulaiman, writing in the mid-9th century, counted the Rashtrakuta king among the four great sovereigns of the world.',
     storyKind: 'interpretation',
     achievements: [
       'Govinda III’s northern campaigns reached the Ganga–Yamuna region.',
@@ -149,7 +149,7 @@ export const KINGDOMS = [
     rulers: ['Harihara I and Bukka Raya I (Sangama dynasty, founders)', 'Deva Raya II', 'Sri Krishnadevaraya (“Kannada Rajya Rama Ramana”), r. 1509–1529 (Tuluva)', 'Achyuta Deva Raya', 'Aliya Rama Raya'],
     states: ['Karnataka', 'Andhra Pradesh', 'Telangana', 'Tamil Nadu', 'Kerala', 'Goa'], markers: ['hampi'],
     summary: 'Founded in 1336 on the Tungabhadra by the brothers Harihara and Bukka, the Karnata (Vijayanagara) kingdom grew into an empire spanning most of South India, ruled in turn by the Sangama, Saluva, Tuluva and Aravidu dynasties.',
-    story: 'Sri Krishnadevaraya’s reign (1509–1529) was a high point of imperial power and cultural patronage. He wrote the Telugu poem Amuktamalyada and supported poets in Kannada, Telugu, Sanskrit and Tamil. Visitors left vivid accounts: the Persian envoy Abdur Razzaq (1443) and the Portuguese Domingo Paes (c. 1520) described a vast, crowded city of markets, festivals and gardens. In 1565 the Karnata (Vijayanagara) army was defeated at the battle of Talikota (Rakkasa–Tangadi); the capital was sacked and abandoned, though the empire continued further south.',
+    story: 'Sri Krishnadevaraya’s reign (1509–1529) was a high point of imperial power and cultural patronage. He wrote the Telugu poem Amuktamalyada and supported poets in Kannada, Telugu, Sanskrit and Tamil. Visitors left vivid accounts. The Persian envoy Abdur Razzaq (1443) described a capital ringed by seven lines of fortification, crowded with bazaars; the Portuguese Domingo Paes (c. 1520), who had seen Renaissance Italy, wrote that it was “as large as Rome, and very beautiful to the sight … the best provided city in the world”. **Historians estimate that around 1500 it was the world’s second-largest city, after Beijing, and probably the richest in the world.** In 1565 the Karnata (Vijayanagara) army was defeated at the battle of Talikota (Rakkasa–Tangadi); the capital was sacked and abandoned, though the empire continued further south.',
     storyKind: 'fact',
     achievements: [
       'An agrarian economy sustained by tanks, anicuts and canals — some still carry water today.',
@@ -167,7 +167,7 @@ export const KINGDOMS = [
     ],
     remains: ['The Group of Monuments at Hampi — UNESCO World Heritage Site (1986)', 'Hampi Bazaar, the Vittala temple street, the Lotus Mahal and stepped tanks such as the Pushkarani', 'Canals and channels still irrigating fields along the Tungabhadra', 'Hampi Utsav — music and dance among the ruins every year'],
     notes: [{ kind: 'fact', text: 'On the name: inscriptions and literature of the period often call the state the Karnata empire (Karnata Samrajya / Karnata Rajya). “Vijayanagara”, the name of its capital city, is the name most widely used by historians today.' }],
-    sources: [SRC.unescoHampi, SRC.michell, SRC.eaton, SRC.W('Vijayanagara Empire'), SRC.W('Krishnadevaraya'), SRC.W('Battle of Talikota')],
+    sources: [SRC.unescoHampi, SRC.michell, SRC.eaton, SRC.W('Vijayanagara Empire'), SRC.W('Krishnadevaraya'), SRC.W('Battle of Talikota'), SRC.W('Hampi'), SRC.W('Domingo Paes'), SRC.W('Abd-al-Razzāq Samarqandī')],
   },
   {
     id: 'regional', letter: 'H', name: 'Keladi Nayakas, Mysore Kingdom and Other Regional Powers', short: 'Keladi, Mysore & regional powers', kn: 'ಕೆಳದಿ, ಮೈಸೂರು ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಶಕ್ತಿಗಳು', years: 'c. 1500 – 1947', start: 1499, end: 1947, color: '#7a3e6b',
@@ -183,7 +183,7 @@ export const KINGDOMS = [
       'Krishnaraja Wadiyar IV’s Mysore founded a university (1916), hydroelectric and irrigation works, and industries.',
     ],
     kannada: 'The Mysore court patronised Kannada poetry, music and painting. The Keladi Nripa Vijayam chronicles the Keladi rulers; Kittur Chennamma and Sangolli Rayanna live on in folk ballads (lavani and dollina pada).',
-    architecture: 'Chitradurga Fort, popularly called Elusuttina Kote (“fort of seven circles”), was built and expanded in phases — by the Nayakas and later rulers — around granite hills. The Aghoreshwara temple at Ikkeri blends Hoysala, Karnata (Vijayanagara) and other elements. The present Mysore Palace was built 1897–1912 after a fire destroyed the earlier wooden palace.',
+    architecture: '**Chitradurga Fort, popularly called Elusuttina Kote (“fort of seven circles”),** was built and expanded in phases — by the Nayakas and later rulers — around granite hills. The Aghoreshwara temple at Ikkeri blends Hoysala, Karnata (Vijayanagara) and other elements. The present Mysore Palace was built 1897–1912 after a fire destroyed the earlier wooden palace.',
     images: [
       { k: 'chitradurgaFort', cap: 'One of the concentric walls of Chitradurga Fort' },
       { k: 'obavva', cap: 'Onake Obavvana Kindi — the gap in Chitradurga Fort’s wall linked to the story of Obavva' },

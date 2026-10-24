@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Img, Modal, NextChapter, PageHero, Reveal, SectionHead, Sources } from '../components/ui.jsx';
+import { Badge, Img, Modal, NextChapter, PageHero, Reveal, Rich, SectionHead, Sources } from '../components/ui.jsx';
 import { IndiaMap, KarnatakaMap } from '../components/maps.jsx';
 import { MONUMENTS, TYPES } from '../data/monuments.js';
 import { SRC } from '../data/sources.js';
@@ -32,9 +32,9 @@ function Detail({ m, onClose, onOpen }) {
           {(m.unesco || m.unescoNote) && <p className="small" style={{ margin: 0 }}><b>UNESCO status:</b> {m.unesco || m.unescoNote}</p>}
           <div>
             <h3 className="h4 mb-2">Notable features</h3>
-            <ul style={{ margin: 0, paddingLeft: 18 }}>{m.features.map((f) => <li key={f}>{f}</li>)}</ul>
+            <ul style={{ margin: 0, paddingLeft: 18 }}>{m.features.map((f) => <li key={f}><Rich text={f} /></li>)}</ul>
           </div>
-          <div className="panel"><div className="eyebrow plain mb-2">The people behind it</div><p style={{ margin: 0 }}>{m.story}</p></div>
+          <div className="panel"><div className="eyebrow plain mb-2">The people behind it</div><p style={{ margin: 0 }}><Rich text={m.story} /></p></div>
           <div className="grid g2" style={{ alignItems: 'center' }}>
             <div className="map-wrap" style={{ padding: 6 }}>
               {m.place === 'ellora'

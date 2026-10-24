@@ -108,6 +108,12 @@ export function Badge({ kind = 'fact', children }) {
   return <span className={`badge ${kind}`}>{children || t(kind)}</span>;
 }
 
+// Renders text with **double-asterisk** spans as bold (used for highlighted facts in data files).
+export function Rich({ text }) {
+  if (!text) return null;
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : part));
+}
+
 // Ranked bar list (e.g. top states or languages); rows flagged `hi` are bolded and coloured.
 export function RankBars({ title, note, rows, unit = '', ranked = true, className = '' }) {
   const [open, setOpen] = useState(null);

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
+import { Badge, Img, NextChapter, Note, PageHero, Reveal, Rich, SectionHead, Sources, ZoomImg } from '../components/ui.jsx';
 import { IndiaMap } from '../components/maps.jsx';
 import { EVENTS, GANTT_ROWS, KINGDOMS } from '../data/kingdoms.js';
 import { useLang } from '../i18n.jsx';
@@ -99,7 +99,7 @@ function KingdomSection({ k }) {
         <div className="split top">
           <Reveal className="stack-lg">
             <div className="prose">
-              <p style={{ fontSize: '1.08rem' }}>{k.story}</p>
+              <p style={{ fontSize: '1.08rem' }}><Rich text={k.story} /></p>
               <Badge kind={k.storyKind} />
             </div>
             <div>
@@ -107,7 +107,7 @@ function KingdomSection({ k }) {
               <ul className="prose" style={{ paddingLeft: 18, margin: 0 }}>{k.achievements.map((x) => <li key={x} style={{ marginBottom: 6 }}>{x}</li>)}</ul>
             </div>
             <div className="prose"><h3 className="h4 mb-2">Kannada, inscriptions & literature</h3><p>{k.kannada}</p></div>
-            <div className="prose"><h3 className="h4 mb-2">Architecture, sculpture & patronage</h3><p>{k.architecture}</p></div>
+            <div className="prose"><h3 className="h4 mb-2">Architecture, sculpture & patronage</h3><p><Rich text={k.architecture} /></p></div>
             {k.notes?.map((n, i) => <Note key={i} kind={n.kind}>{n.text}</Note>)}
           </Reveal>
           <Reveal className="stack-lg">
@@ -146,9 +146,17 @@ function SubNav() {
     KINGDOMS.forEach((k) => { const el = document.getElementById(k.id); el && io.observe(el); });
     return () => io.disconnect();
   }, []);
+  const bar = useRef(null);
+  useEffect(() => {
+    const el = bar.current?.querySelector('a.active');
+    if (!el) return;
+    const box = bar.current;
+    const left = box.scrollLeft + el.getBoundingClientRect().left - box.getBoundingClientRect().left - (box.clientWidth - el.offsetWidth) / 2;
+    box.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+  }, [active]);
   return (
     <nav className="subnav" aria-label="Historical periods">
-      <div className="wrap">
+      <div className="wrap" ref={bar}>
         {KINGDOMS.map((k) => (
           <a key={k.id} href={`#${k.id}`} className={active === k.id ? 'active' : ''}>
             {k.letter}. {k.short || k.name.replace(' Dynasty', '')}<span className="yr">{k.years.replace(' CE', '')}</span>
