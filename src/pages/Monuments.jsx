@@ -11,7 +11,7 @@ function Detail({ m, onClose, onOpen }) {
   return (
     <Modal onClose={onClose} label={m.name}>
       <div className="modal-grid">
-        <Img k={m.img} ratio="" caption={m.name} />
+        <Img k={m.img} ratio="" caption={m.name} full />
         <div className="modal-body stack">
           <div className="row">
             {m.unesco ? <span className="badge unesco">UNESCO · {m.unesco.split('—').pop().trim()}</span> : <span className="badge neutral">Not a World Heritage Site</span>}

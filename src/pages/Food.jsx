@@ -124,6 +124,9 @@ export default function Food() {
             : <p className="muted">No dishes in this combination yet — try another region or type.</p>}
           <p className="tiny muted mt-4">Photographs are openly licensed from Wikimedia Commons (credits on the Sources page). Where a photograph shows a closely related dish under another name, the caption says so.</p>
           <div className="mt-4"><Sources items={[SRC.kaTourism, SRC.giRegistry, SRC.W('Mysore pak'), SRC.W('Dharwad pedha'), SRC.W('Cuisine of Karnataka'), SRC.W('Kori rotti'), SRC.W('Baba Budan'),
+            SRC.W('Chicken ghee roast'), SRC.W('Byadagi chilli'),
+            { label: 'Times of India — “The man who spread the aroma of ghee roast” (13 Aug 2015)', url: 'https://timesofindia.indiatimes.com/city/mangaluru/the-man-who-spread-the-aroma-of-ghee-roast/articleshow/48464708.cms', kind: 'Reference (secondary)' },
+            { label: 'The News Minute — Mangalorean seafood in Bengaluru (28 Nov 2022)', url: 'https://www.thenewsminute.com/karnataka/prawn-ghee-roast-kane-rava-fry-mouth-watering-mangalorean-food-bengaluru-170379', kind: 'Reference (secondary)' },
             { label: 'The Hindu — “In search of Mysore Pak” (25 Nov 2012)', url: 'https://www.thehindu.com/features/metroplus/Food/In-search-of-Mysore-Pak/article15616920.ece', kind: 'Reference (secondary)' }]} /></div>
         </div>
       </section>

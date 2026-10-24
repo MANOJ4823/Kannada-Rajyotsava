@@ -62,7 +62,7 @@ export default function SourcesPage() {
               <tbody>
                 {imgs.map(([k, v]) => (
                   <tr key={k} style={{ borderBottom: '1px solid var(--line)', verticalAlign: 'top' }}>
-                    <td style={{ padding: 8, width: 84 }}><img src={v.src} alt="" loading="lazy" style={{ width: 72, height: 54, objectFit: 'cover', borderRadius: 4 }} /></td>
+                    <td style={{ padding: 8, width: 84 }}><img src={v.thumb || v.src} alt="" loading="lazy" style={{ width: 72, height: 54, objectFit: 'cover', borderRadius: 4 }} /></td>
                     <td style={{ padding: '8px 8px 8px 0' }}>{v.page ? <a href={v.page} target="_blank" rel="noreferrer">{v.file}</a> : v.file}</td>
                     <td style={{ padding: '8px 8px 8px 0', maxWidth: 260 }}>{v.author}</td>
                     <td style={{ padding: '8px 0' }}>{v.licenseUrl ? <a href={v.licenseUrl} target="_blank" rel="noreferrer">{v.license}</a> : v.license}</td>

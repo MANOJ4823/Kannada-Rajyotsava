@@ -15,6 +15,12 @@ export const CONSONANTS = [
   ['ಯ', 'ya', 'ಯಂತ್ರ', 'yantra', 'machine'], ['ರ', 'ra', 'ರಾಗಿ', 'rāgi', 'finger millet'], ['ಲ', 'la', 'ಲತೆ', 'late', 'creeper'], ['ವ', 'va', 'ವೀಣೆ', 'vīṇe', 'veena'], ['ಶ', 'śa', 'ಶಂಖ', 'śaṅkha', 'conch'],
   ['ಷ', 'ṣa', 'ಷಟ್ಪದಿ', 'ṣaṭpadi', 'six-line verse'], ['ಸ', 'sa', 'ಸಕ್ಕರೆ', 'sakkare', 'sugar'], ['ಹ', 'ha', 'ಹಸು', 'hasu', 'cow'], ['ಳ', 'ḷa', 'ಬಾಳೆ', 'bāḷe', 'banana'],
 ];
+// Kannada numerals (glyph, value, number word, transliteration, English).
+export const NUMERALS = [
+  ['೦', '0', 'ಸೊನ್ನೆ', 'sonne', 'zero'], ['೧', '1', 'ಒಂದು', 'ondu', 'one'], ['೨', '2', 'ಎರಡು', 'eraḍu', 'two'], ['೩', '3', 'ಮೂರು', 'mūru', 'three'],
+  ['೪', '4', 'ನಾಲ್ಕು', 'nālku', 'four'], ['೫', '5', 'ಐದು', 'aidu', 'five'], ['೬', '6', 'ಆರು', 'āru', 'six'], ['೭', '7', 'ಏಳು', 'ēḷu', 'seven'],
+  ['೮', '8', 'ಎಂಟು', 'eṇṭu', 'eight'], ['೯', '9', 'ಒಂಬತ್ತು', 'ombattu', 'nine'], ['೧೦', '10', 'ಹತ್ತು', 'hattu', 'ten'],
+];
 export const VOWEL_SIGNS = [['', 'a'], ['ಾ', 'ā'], ['ಿ', 'i'], ['ೀ', 'ī'], ['ು', 'u'], ['ೂ', 'ū'], ['ೃ', 'ṛ'], ['ೆ', 'e'], ['ೇ', 'ē'], ['ೈ', 'ai'], ['ೊ', 'o'], ['ೋ', 'ō'], ['ೌ', 'au'], ['ಂ', 'aṁ'], ['ಃ', 'aḥ']];
 
 export const PHRASES = [

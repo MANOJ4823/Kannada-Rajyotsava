@@ -80,6 +80,12 @@ const GROUPS = {
         body: 'A short-story writer, novelist, playwright and poet from Shivamogga district, he won the Sahitya Akademi Award for the story collection Kallu Karaguva Samaya. His film Pallavi (1976) won the National Film Award for Best Direction. In 1980 he left teaching English at Bangalore University to found Lankesh Patrike, an advertisement-free weekly he edited until his death.' },
       { name: 'M. V. Kamath', when: '1921–2014', role: 'Journalist and author · Padma Bhushan 2004', img: 'kamathPortrait', cap: 'M. V. Kamath',
         body: 'Born in Udupi, he was Washington correspondent of The Times of India, edited The Illustrated Weekly of India and later chaired Prasar Bharati, India’s public broadcaster. He wrote more than 50 books, and from 1997 was honorary director of the School of Communication at Manipal.' },
+      { name: 'Anant Nag', when: 'b. 1948, Shirali (Uttara Kannada)', role: 'Actor and former minister · Dadasaheb Phalke Award for 2024 (presented 2026) · Padma Bhushan 2025', img: 'anantNagPortrait', cap: 'Anant Nag at the 72nd National Film Awards, Kevadia, 2026',
+        body: 'He began in films with Sankalpa (1973) and Shyam Benegal’s Ankur (1974), going on to six Benegal films including Nishant, Manthan and Bhumika, and has acted in more than 300 films, most of them in Kannada — among them Bayalu Daari, Naa Ninna Bidalaare, Gauri Ganesha and Godhi Banna Sadharana Mykattu. He served as MLA for Malleshwaram and as Minister for Bangalore Development (1996–99). The elder brother of Shankar Nag, he also acted in Malgudi Days; in September 2026 the President presented him the Dadasaheb Phalke Award for 2024.' },
+      { name: 'Shankar Nag', when: '1954–1990, born Honnavar', role: 'Actor, director and theatre-maker · Best Actor (Silver Peacock), IFFI 1979 · Director of Malgudi Days', img: 'shankarNagPortrait', cap: 'Shankar Nag',
+        body: 'His debut in Girish Karnad’s Ondanondu Kaladalli (1978) made him the first recipient of the Best Actor award at the International Film Festival of India. He directed the Doordarshan series Malgudi Days, from R. K. Narayan’s stories and filmed largely at Agumbe, and founded the Sanket theatre group with his brother Anant Nag; Ranga Shankara theatre in Bengaluru (2004) was built in his memory. He died in a road accident near Davanagere in 1990, aged 35.' },
+      { name: 'Puneeth Rajkumar', when: '1975–2021', role: 'Actor, singer and producer · National Film Award (Best Child Artist) · Karnataka Ratna (posthumous, 2022)', img: 'puneethPortrait', cap: 'Puneeth Rajkumar in 2019',
+        body: 'The youngest son of Dr. Rajkumar, he won the National Film Award for Best Child Artist for Bettada Hoovu (1985) and went on to lead more than 30 Kannada films, also singing and producing. He died of a heart attack in 2021, aged 46; his donated eyes restored sight to four people, and eye-donation pledges in Karnataka rose sharply afterwards. The Karnataka Ratna was conferred on him posthumously in 2022.' },
     ],
   },
   sport: {
@@ -96,6 +102,8 @@ const GROUPS = {
         body: 'She won 4×400 m relay gold at the Asian Games in 2014 (Incheon) and 2018 (Jakarta), along with individual 400 m bronze in 2014. She also won relay gold at the Asian Athletics Championships in 2013 and 2017, and ran in India’s women’s relay team at the 2016 Rio Olympics.' },
       { name: 'Shreyanka Patil', when: 'b. 2002, Bengaluru', role: 'Cricketer (off-spinning all-rounder) · WPL Purple Cap and Emerging Player of the Season 2024', img: 'shreyankaPortrait', cap: 'Shreyanka Patil with the Women’s Premier League trophy',
         body: 'She has played for Karnataka since 2019 and for Royal Challengers Bengaluru in the Women’s Premier League since its first season in 2023. In 2024 she was the league’s leading wicket-taker with 13 wickets, including 4/12 in the final, as the team won its first title; it won again in 2026. She made her debut for India in December 2023, played at the 2024 and 2026 Women’s T20 World Cups, and was in the India squad that won gold at the 2026 Asian Games.' },
+      { name: 'Rahul Dravid', when: 'b. 1973, Indore; raised in Bengaluru', role: 'India batsman, captain and head coach · Arjuna 1998 · Padma Shri 2004 · Padma Bhushan 2013 · ICC Hall of Fame 2018', img: 'dravidPortrait', cap: 'Rahul Dravid in 2009',
+        body: 'Known as “The Wall” for his defensive technique, he played 164 Tests (1996–2012), scoring 13,288 runs with 36 centuries, and 10,889 runs in 344 ODIs, and captained India in both formats in 2005–07. As India’s head coach from November 2021, he guided the team to victory in the 2024 ICC Men’s T20 World Cup.' },
     ],
   },
   reform: {
@@ -114,6 +122,8 @@ const GROUPS = {
         body: 'Born at Sangolli in Belagavi district, he fought for Kittur in 1824. From 1829 he led a guerrilla campaign against Company rule, seeking to place Chennamma’s adopted son on the throne. Captured in 1830, he was hanged near Nandagad on 26 January 1831. Bengaluru’s main railway station is named after him.' },
       { name: 'Kudmul Ranga Rao', when: '1859–1928', role: 'Social reformer, Mangaluru', img: 'kudmulPortrait', cap: 'Kudmul Ranga Rao (portrait painting)',
         body: 'Founded the Depressed Classes Mission in Mangaluru (1897), opening schools and hostels for children of oppressed castes.' },
+      { name: 'Kamaladevi Chattopadhyay', when: '1903–1988, born Mangaluru', role: 'Freedom fighter and champion of Indian crafts · Padma Bhushan 1955 · Ramon Magsaysay Award 1966 · Padma Vibhushan 1987', img: 'kamaladeviPortrait', cap: 'Kamaladevi Chattopadhyay in later life',
+        body: 'Jailed for her part in civil disobedience, she became in 1926 the first woman in India to stand for a legislative seat, in the Madras Presidency. After Independence she founded the Indian Cooperative Union (1948) to resettle refugees, headed the All India Handicrafts Board and helped found the Crafts Council of India, reviving the country’s craft and handloom traditions; she also headed the Sangeet Natak Akademi.' },
     ],
   },
   medicine: {
@@ -138,6 +148,10 @@ const GROUPS = {
         body: 'Cheppudira Devaiah Subbaiah (spelt “Subia” in official records) was commissioned in the Indian Air Force in 1942 and flew in the Second World War. In the 1947–48 Kashmir operations he flew more than 70 sorties in about six weeks in support of the capture of Gurais, earning the Vir Chakra. He was Senior Air Staff Officer of Western Air Command during the 1971 war, and retired as an Air Marshal after heading Maintenance Command (1977–78).' },
       { name: 'Lt. Gen. B. C. Nanda', when: '1931–2018', role: 'GOC-in-C, Northern Command 1987–89 · PVSM 1987 · AVSM 1982', img: 'nandaPortrait', cap: 'Lt. Gen. B. C. Nanda',
         body: 'Biddanda Chengappa Nanda, a nephew of Field Marshal Cariappa, was commissioned into the Mahar Regiment in 1951 and served in the Goa (1961) and Bangladesh (1971) operations. He commanded II Corps and then the Army’s Northern Command. Retiring to Madikeri, he led the Coorg Wildlife Society and worked for conservation in the Western Ghats.' },
+      { name: 'Haifa Day: the Mysore Lancers at Haifa', when: '23 September 1918 · marked every 23 September', role: 'The Mysore Lancers, state forces of the Kingdom of Mysore · Battle honour “Megiddo”', group: true,
+        img: 'haifa1918', cap: 'Jodhpur and Mysore Lancers passing through Haifa after its capture, 23 September 1918 (Imperial War Museums, Q 12335)',
+        img2: 'mysoreLancersMemorial', cap2: 'Mysore Lancers Memorial, J. C. Nagar, Bengaluru',
+        body: 'In the First World War campaign in Sinai and Palestine, the Jodhpur Lancers and the Mysore Lancers of the 15th (Imperial Service) Cavalry Brigade captured the port of Haifa on 23 September 1918. A squadron of the Mysore Lancers stormed an Austrian battery on the slopes of Mount Carmel while the Jodhpur Lancers made the main mounted charge, and the Mysore Lancers followed them into the town. The Lancers’ roll of honour is kept at the Mysore Lancers Memorial in J. C. Nagar, Bengaluru, where a wreath is laid each year, and the Indian Army’s 61st Cavalry, which carries on both regiments, marks 23 September as Haifa Day. In 2018 New Delhi’s Teen Murti Chowk, the memorial to the brigade, was renamed Teen Murti Haifa Chowk.' },
     ],
   },
   saints: {
@@ -212,14 +226,18 @@ export default function People() {
             SRC.W('K. M. Cariappa'), SRC.W('Kodandera Subayya Thimayya'), SRC.W('C. D. Subbaiah'), SRC.W('Biddanda Chengappa Nanda'),
             SRC.W('Kiran Mazumdar-Shaw'), SRC.W('K. Kasturirangan'), SRC.W('Anke Gowda'), SRC.W('Devi Shetty'), SRC.W('C. N. Manjunath'),
             SRC.W('E. S. Venkataramiah'), SRC.W('B. V. Nagarathna'), SRC.W('Puttanna Kanagal'), SRC.W('P. Lankesh'), SRC.W('M. V. Kamath'), SRC.W('Chowdiah'),
-            SRC.W('Ashwini Ponnappa'), SRC.W('Poovamma Machettira'), SRC.W('Shreyanka Patil'), SRC.W('Vijay Sankeshwar'), SRC.W('V. G. Siddhartha'), SRC.W('Yaduveer Krishnadatta Chamaraja Wadiyar'), SRC.W('Twenty-sixth Amendment of the Constitution of India'), SRC.W('Anegundi'), SRC.W('Aravidu dynasty'),
+            SRC.W('Ashwini Ponnappa'), SRC.W('Poovamma Machettira'), SRC.W('Shreyanka Patil'), SRC.W('Vijay Sankeshwar'), SRC.W('V. G. Siddhartha'), SRC.W('Yaduveer Krishnadatta Chamaraja Wadiyar'), SRC.W('Twenty-sixth Amendment of the Constitution of India'), SRC.W('Anegundi'), SRC.W('Aravidu dynasty'), SRC.W('Shankar Nag'), SRC.W('Puneeth Rajkumar'), SRC.W('Rahul Dravid'), SRC.W('Kamaladevi Chattopadhyay'), SRC.W('Anant Nag'), SRC.W('Battle of Haifa (1918)'), SRC.W('15th (Imperial Service) Cavalry Brigade'), SRC.W('61st Cavalry (India)'),
+            { label: 'Frontline — Remembering the Mysore Lancers and their heroic charge (2022)', url: 'https://frontline.thehindu.com/arts-and-culture/heritage/remembering-the-mysore-lancers-and-their-heroic-charge-in-the-first-world-war/article65996291.ece', kind: 'Reference (secondary)' },
+            { label: 'PIB — 72nd National Film Awards and Dadasaheb Phalke Award (22 Sep 2026)', url: 'https://www.pib.gov.in/ShowAlbum.aspx?albumid=230092&reg=48&lang=1', kind: 'Official' },
+            { label: 'Ramon Magsaysay Award Foundation — Kamaladevi Chattopadhyay', url: 'https://www.rmaward.asia/awardees/chattopadhyay-kamaladevi', kind: 'Official' },
+            { label: 'ESPNcricinfo Statsguru — Rahul Dravid, Test batting', url: 'https://stats.espncricinfo.com/ci/engine/player/28114.html?class=1;template=results;type=batting', kind: 'Reference (secondary)' },
             { label: 'The Hindu — Krishna Devaraya’s descendant on the Vijayanagara Utsava (16 Feb 2024)', url: 'https://www.thehindu.com/news/national/karnataka/emperor-krishna-devarayas-descendent-throws-light-on-multiculturalism-thriving-in-vijayanagara-empire/article67849575.ece', kind: 'Reference (secondary)' }]} /></div>
         </div>
       </section>
       {open && (
         <Modal onClose={() => setOpen(null)} label={open.p.name}>
           <div className="modal-grid">
-            <Img k={open.k} ratio="" caption={open.cap} placeholderNote={open.p.note} className={open.p.group ? 'pop-group' : 'pop-portrait'} />
+            <Img k={open.k} ratio="" caption={open.cap} full placeholderNote={open.p.note} className={open.p.group ? 'pop-group' : 'pop-portrait'} />
             <div className="modal-body stack">
               <div className="eyebrow">{group.label}</div>
               <h2 className="h2">{open.p.name}</h2>

@@ -304,6 +304,12 @@ html[lang='kn'] .narration { font-family: var(--kn-serif); font-size: clamp(1.2r
 .panel { background: var(--sand); border-radius: var(--radius-lg); padding: clamp(22px, 3vw, 40px); }
 .panel.white { background: #fff; border: 1px solid var(--line); }
 .panel.dark { background: var(--indigo); color: var(--cream); }
+.rank-bars { color: var(--ink); }
+.rank-bars .muted { color: var(--ink-2); }
+.rank-bars .eyebrow { color: var(--copper); }
+.rank-toggle { width: 100%; background: none; border: 0; padding: 0; font-family: inherit; color: inherit; cursor: pointer; text-align: left; }
+.rank-toggle:hover span:first-child { text-decoration: underline; }
+.rank-detail { font-size: 0.8rem; color: var(--copper); font-weight: 600; letter-spacing: 0.04em; margin: 6px 0 2px; }
 
 /* ---------- Badges / certainty ---------- */
 .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 4px 9px; border-radius: 99px; white-space: nowrap; }

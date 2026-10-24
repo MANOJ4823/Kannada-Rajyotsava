@@ -1,7 +1,11 @@
-import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Badge, ZoomImg } from '../components/ui.jsx';
+import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, Badge, RankBars, ZoomImg } from '../components/ui.jsx';
 import { SRC } from '../data/sources.js';
 
 // Award years are the official award years of the Jnanpith (not publication years of the works).
+const JNANPITH_TOP_LANGS = [
+  { n: 'Hindi', v: 12, detail: 'By state of birth: Uttar Pradesh 6 · Uttarakhand 1 · Bihar 1 · Madhya Pradesh 1 · Himachal Pradesh 1 · Chhattisgarh 1 · present-day Pakistan 1' }, { n: 'Kannada', v: 8, hi: true }, { n: 'Bengali', v: 6 }, { n: 'Malayalam', v: 6 }, { n: 'Urdu', v: 5 },
+];
+
 const JNANPITH = [
   { yr: 1967, name: 'Kuvempu', full: 'Kuppali Venkatappa Puttappa', kn: 'ಕುವೆಂಪು', img: 'kuvempu', cited: 'Sri Ramayana Darshanam (ಶ್ರೀ ರಾಮಾಯಣ ದರ್ಶನಂ)', note: 'Shared with Umashankar Joshi (Gujarati).',
     body: 'Poet, novelist and thinker of the “universal human” (Vishwa Manava). His novels Kanuru Heggadithi and Malegalalli Madumagalu portray Malnad life; he wrote Jaya Bharata Jananiya Tanujate, now the state anthem. He was named Rashtrakavi and was the first recipient of the Karnataka Ratna.' },
@@ -47,8 +51,11 @@ const POETS = [
   { name: 'Basavanna', img: 'basava', imgCap: 'Statue of Basavanna, Basavakalyan', when: '12th c.', d: 'Statesman and saint whose vachanas called for equality and honest work.' },
   { name: 'Akka Mahadevi', img: 'akkaPortrait', imgCap: 'Akka Mahadevi (artistic depiction)', when: '12th c.', d: 'Poet-mystic whose fearless vachanas are addressed to Chennamallikarjuna.' },
   { name: 'Allama Prabhu', img: 'allamaPortrait', imgCap: 'Allama Prabhu (artistic depiction)', when: '12th c.', d: 'Mystic and teacher whose riddling vachanas are among the most philosophical in Kannada.' },
+  { name: 'Raghavanka', img: 'raghavankaPortrait', imgCap: 'Raghavanka (artistic depiction)', when: 'c. 1200', d: 'Poet of the Harishchandra Kavya; nephew and pupil of Harihara, credited with popularising the six-line shatpadi metre in Kannada narrative poetry.' },
+  { name: 'Kumaravyasa', img: 'kumaravyasaPortrait', imgCap: 'Kumaravyasa (artistic depiction)', when: '15th c.', d: 'Poet of the Karnata Bharata Kathamanjari (Gadugina Bharata), a Kannada retelling of the first ten books of the Mahabharata in bhamini shatpadi.' },
   { name: 'Purandara Dasa', img: 'purandara', when: 'c. 1484–1564', d: 'Haridasa composer; traditionally honoured as the grandfather of Carnatic music.' },
   { name: 'Kanaka Dasa', img: 'kanaka', when: 'c. 1509–1609', d: 'Poet-saint from the Kuruba community; Mohanatarangini and Ramadhanya Charite.' },
+  { name: 'Sarvagna (Sarvajna)', img: 'sarvajnaStatue', imgCap: 'Statue of Sarvagna, Abalur (modern statue)', when: '16th–17th c.', d: 'Poet of tripadis, pithy three-line verses; tradition links him with Abalur and Masur in today’s Haveri district.' },
 ];
 
 export default function Literature() {
@@ -83,6 +90,10 @@ export default function Literature() {
               </Reveal>
             ))}
           </div>
+          <Reveal className="mt-5" style={{ maxWidth: 620 }}>
+            <RankBars title="Jnanpith Awards by language — top 5 in India" rows={JNANPITH_TOP_LANGS}
+              note="66 laureates from the 1st award (1965) to the 60th (2025). The award is given by language, not by state. Select Hindi to see its laureates by birthplace (present-day state)." />
+          </Reveal>
           <div className="mt-4"><Sources items={[SRC.jnanpith, SRC.W('Jnanpith Award'), SRC.kannadaSahitya]} notes={[{ kind: 'fact', text: 'Names, years and citations checked against the Bharatiya Jnanpith list of laureates.' }]} /></div>
         </div>
       </section>

@@ -50,10 +50,20 @@ const ARTS = [
     region: 'Across Karnataka', instruments: 'Voice with harmonium, tabla or tanpura', costume: '—',
     context: 'Concerts, gatherings and recordings set 12th-century vachanas to music in both Carnatic and Hindustani styles.',
     meaning: 'Brings the egalitarian poetry of the vachana saints to new audiences.' },
+  { id: 'gamaka', name: 'Gamaka', kn: 'ಗಮಕ', img: 'gamaka', cap: 'Gamaka singers reciting Kannada poetry at a programme', cat: 'Music',
+    region: 'Across Karnataka; Mattur–Hosahalli (Shivamogga district) is known as the “gamaka village”', instruments: 'Solo voice with only a drone (shruti); no rhythm or tala',
+    costume: 'No special costume; the gamaki usually sits with the text on a low book-stand',
+    context: 'One performer, the gamaki, sings stanzas of old Kannada poetry in ragas chosen to suit their mood, and a second gives the vyakhyana, explaining the meaning. Favourite texts include Kumaravyasa’s Karnata Bharata Kathamanjari, Lakshmisha’s Jaimini Bharata and the Torave Ramayana, recited in temples, homes and gamaka sammelanas.',
+    meaning: 'Gamaka puts the poetry first, using melody to make classical Kannada verse understandable to ordinary listeners. The Karnataka Gamaka Kala Parishat, founded in Bengaluru in 1982, keeps it alive through classes, examinations and annual conferences; the gamaki H. R. Keshava Murthy received the Padma Shri in 2022.' },
   { id: 'theatre', name: 'Kannada theatre', kn: 'ಕನ್ನಡ ರಂಗಭೂಮಿ', img: 'ninasam', cap: 'Shivarama Karantha Rangamandira, Ninasam, Heggodu (Shivamogga district)', cat: 'Theatre',
     region: 'Statewide', instruments: '—', costume: '—',
     context: 'Company theatre toured towns from the late 19th century; Ninasam at Heggodu (founded by K. V. Subbanna) and Rangayana in Mysuru (founded by B. V. Karanth) trained generations.',
     meaning: 'Girish Karnad, Chandrashekhara Kambara and P. Lankesh wrote plays staged across India.' },
+  { id: 'togalu', name: 'Togalu Gombeyata', kn: 'ತೊಗಲು ಗೊಂಬೆಯಾಟ', img: 'togaluGombe', cap: 'Leather puppets from the Nagamangala region arranged as the scene of Babruvahana’s battle', cat: 'Theatre',
+    region: 'Villages of Ballari, Koppal, Mandya (Nagamangala), Mysuru and Hassan', instruments: 'The puppeteers sing and voice the characters, with harmonium, maddale drum and tala cymbals',
+    costume: 'Flat, translucent figures cut from treated goat hide (once deer skin), perforated and painted red, blue, green and black, with jointed limbs worked by bamboo rods',
+    context: '“The play of leather dolls”: performed at night, traditionally until dawn, at temple fairs and village festivals by hereditary families such as the Killekyata community. A lamp behind a white cloth screen casts the coloured shadows; after an invocation to Ganesha, episodes from the Ramayana and Mahabharata unfold, with the clown Killekyata and his wife for comic relief.',
+    meaning: 'A distinctive Karnataka form of storytelling that carried the epics to rural audiences, now kept alive by a few hereditary troupes who have also added plays on Gandhi and social themes. Belagallu Veeranna received the Sangeet Natak Akademi Award (2011), and Bhimavva Shillekyathara of Koppal the Padma Shri (2025).' },
   { id: 'sandalwood', name: 'Sandalwood — Kannada cinema', kn: 'ಚಂದನವನ', img: 'rajkumar', cap: 'Dr. Rajkumar on a 2009 Indian postage stamp', cat: 'Cinema',
     region: 'Bengaluru and beyond', instruments: '—', costume: '—',
     context: 'From Sati Sulochana (1934) and the Dr. Rajkumar era to the new wave of Samskara and Ghatashraddha and recent hits such as KGF and Kantara, which drew on coastal bhuta kola traditions.',
@@ -91,7 +101,9 @@ export default function Arts() {
             <Note kind="interpretation" title="Shared traditions">Many art forms here — Kolata, Carnatic music, Yakshagana-like theatre — are also practised in neighbouring states. Celebrating Karnataka’s versions does not mean claiming them exclusively.</Note>
             <Note kind="fact" title="Audio and video">We have not embedded recordings: performances belong to their artists and troupes. Watch live — Rajyotsava season is full of free performances.</Note>
           </div>
-          <div className="mt-4"><Sources items={[SRC.culture, SRC.kaTourism, SRC.W('Yakshagana'), SRC.W('Dollu Kunitha'), SRC.W('Mysore painting'), SRC.W('Kannada cinema'), SRC.W('Ninasam'), SRC.W('Folk arts of Karnataka'),
+          <div className="mt-4"><Sources items={[SRC.culture, SRC.kaTourism, SRC.W('Yakshagana'), SRC.W('Dollu Kunitha'), SRC.W('Mysore painting'), SRC.W('Kannada cinema'), SRC.W('Ninasam'), SRC.W('Folk arts of Karnataka'), SRC.W('Gamaka (storytelling)'), SRC.W('Togalu gombeyaata'),
+            { label: 'Karnataka Gamaka Kala Parishat — About', url: 'https://www.karnatakagamakakala.org/about-us', kind: 'Official' },
+            { label: 'UNIMA World Encyclopedia of Puppetry Arts — Togalu Gombeyata', url: 'https://wepa.unima.org/en/togalu-gombeyata/', kind: 'Scholarly' },
             { label: 'Mysore University Vishwakosha — Karnataka Janapada (Kodagu)', url: 'https://kn.wikisource.org/wiki/ಮೈಸೂರು_ವಿಶ್ವವಿದ್ಯಾನಿಲಯ_ವಿಶ್ವಕೋಶ/ಕರ್ನಾಟಕ_ಜಾನಪದ', kind: 'Scholarly' }]} /></div>
         </div>
       </section>
@@ -118,7 +130,7 @@ export default function Arts() {
       {f && (
         <Modal onClose={() => setOpenF(null)} label={f.name}>
           <div className="modal-grid">
-            <Img k={f.img} ratio="" caption={f.cap} />
+            <Img k={f.img} ratio="" caption={f.cap} full />
             <div className="modal-body stack">
               <div className="eyebrow">Festival</div>
               <h2 className="h2">{f.name}</h2>
@@ -137,7 +149,7 @@ export default function Arts() {
       {a && (
         <Modal onClose={() => setOpen(null)} label={a.name}>
           <div className="modal-grid">
-            <Img k={a.img} ratio="" caption={a.cap} placeholderNote="Openly licensed photograph not verified for this art form." />
+            <Img k={a.img} ratio="" caption={a.cap} full placeholderNote="Openly licensed photograph not verified for this art form." />
             <div className="modal-body stack">
               <div className="eyebrow">{a.cat}</div>
               <h2 className="h2">{a.name}</h2>

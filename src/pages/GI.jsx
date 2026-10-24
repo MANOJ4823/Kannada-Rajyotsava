@@ -9,6 +9,8 @@ const GI = [
     what: 'Pure mulberry silk saris with gold zari borders, woven by the state-owned Karnataka Silk Industries Corporation.', how: 'Silk from Karnataka’s sericulture belt is reeled, dyed and woven; the zari contains real gold and silver.' },
   { name: 'Mysore Agarbathi', app: '13 & 18', fy: '2004–05', type: 'Manufactured', region: 'Mysuru and Karnataka', img: 'mysoreAgarbathiImg', imgCap: 'Incense sticks (illustration)',
     what: 'Incense sticks scented with sandalwood and other natural aromatics, produced by thousands of home-based workers.', how: 'Bamboo sticks are hand-rolled in a paste of charcoal, jigat powder and aromatic ingredients, then perfumed.' },
+  { name: 'Bidriware', app: '20', fy: '2005–06', type: 'Handicraft', region: 'Bidar', img: 'giBidriware', imgCap: 'Bidriware boxes, vases, plates and pendants',
+    what: 'A deep-black alloy of zinc and copper, inlaid with gleaming pure silver in floral and geometric patterns — a craft practised in Bidar for centuries.', how: 'The cast piece is engraved and inlaid with silver wire, then dipped in a boiled solution of ammonium chloride and earth that, by tradition, comes only from the Bidar fort area; this turns the alloy black while the silver keeps its shine.' },
   { name: 'Channapatna toys and dolls', app: '23', fy: '2004–05', type: 'Handicraft', region: 'Channapatna, Ramanagara district', img: 'channapatna',
     what: 'Smooth, brightly lacquered wooden toys free of sharp edges.', how: 'Soft ivory-wood (hale) is turned on a lathe and coloured with lac and vegetable dyes.' },
   { name: 'Mysore Rosewood Inlay', app: '24', fy: '2004–05', type: 'Handicraft', region: 'Mysuru', img: 'mysoreInlayImg', imgCap: 'Inlaid wooden elephant, Lalitha Mahal Palace Hotel, Mysuru',

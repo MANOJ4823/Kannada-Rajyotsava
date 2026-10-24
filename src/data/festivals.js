@@ -12,6 +12,16 @@ export const FESTIVALS = [
     what: 'The red-and-yellow Kannada flag goes up on buildings and vehicles; schools, offices and neighbourhoods hold music and cultural programmes, and the state government presents the Rajyotsava Awards.',
     meaning: 'Marks the formation of the enlarged Kannada-speaking Mysore State on 1 November 1956.',
     link: { to: '/unification', label: 'The unification of Karnataka' } },
+  { id: 'ugadi', name: 'Ugadi (Yugadi)', kn: 'ಯುಗಾದಿ', img: 'festUgadi', cap: 'Bevu-bella and Ugadi offerings on a brass plate with mango leaves',
+    when: 'Chaitra Shukla Pratipada — March/April', where: 'Across Karnataka (also Andhra Pradesh and Telangana)', kind: 'tradition',
+    what: 'The new year of the Chandramana (lunar) calendar followed in most of Karnataka, marked with an oil bath, mango-leaf toranas over doorways, bevu-bella (neem and jaggery), obbattu, temple visits and the panchanga shravana, a public reading of the new year’s almanac. Followers of the solar calendar, such as many on the coast, keep Souramana Ugadi in mid-April.',
+    meaning: 'Eating bevu-bella is a reminder that the coming year will bring both the bitter and the sweet. The name comes from the Sanskrit yuga + adi, “the beginning of an age”.',
+    link: { to: '/food', label: 'Obbattu and the food of Karnataka' } },
+  { id: 'sankranti', name: 'Makara Sankranti', kn: 'ಮಕರ ಸಂಕ್ರಾಂತಿ', img: 'festSankranti', cap: 'Ellu-bella with sugarcane and jaggery for Makara Sankranti',
+    when: 'Mid-January — usually 14 or 15 January', where: 'Across Karnataka', kind: 'tradition',
+    what: 'A suggi (harvest) festival marking the sun’s entry into Makara. Families exchange ellu-bella — sesame, jaggery, groundnut and dry coconut — with sakkare acchu (sugar moulds) and sugarcane, saying “ellu bella thindu olle maathaadi”. In villages cattle are decorated and paraded, and in some places driven across a fire (kichchu haayisuvudu).',
+    meaning: 'It marks the start of Uttarayana, the sun’s northward course, and gives thanks for the harvest; ellu-bella carries the wish that people will speak sweetly to one another.',
+    link: { to: '/food', label: 'The food of Karnataka' } },
   { id: 'kambala', name: 'Kambala', kn: 'ಕಂಬಳ', img: 'festKambala', cap: 'A Kambala runner and buffaloes racing through the slush',
     when: 'November – March', where: 'Udupi and Dakshina Kannada (Tulu Nadu)', kind: 'fact',
     what: 'Pairs of buffaloes race down twin tracks of slushy paddy field, guided by a barefoot runner. Village meets draw huge crowds.',
@@ -42,6 +52,11 @@ export const FESTIVALS = [
     what: 'Devotees gather at the source of the Kaveri for the Tirthodbhava, when the sacred spring is believed to well up in the kundike at a predicted moment.',
     meaning: 'Kaveri Sankramana is one of the most important festivals of the Kodava community, honouring the river that waters Karnataka and Tamil Nadu.',
     link: { to: '/land', label: 'Rivers of Karnataka' } },
+  { id: 'huttari', name: 'Huttari (Puttari)', kn: 'ಹುತ್ತರಿ · ಪುತ್ತರಿ', img: 'festHuttari', cap: 'Kodava women dance the ummathaat at Madikeri Fort during Puttari celebrations, 2018',
+    when: 'Full moon of the Kodava month Birchyaar — late November/December', where: 'Kodagu', kind: 'tradition',
+    what: 'The Kodava rice-harvest festival. Families gather at the ancestral house (ainmane) and walk by lamplight to the paddy field, where at an hour fixed by astrologers the first sheaves are cut to cries of “Poli poli deva!” and a gunshot, then carried home. It is observed first at the Padi Igguthappa temple, and over the following days come house-to-house singing with dudi drums and the kolata stick dance.',
+    meaning: 'The name means “new rice” (Kodava pudiya ari). The festival gives thanks for the harvest and prays for plenty — “Poli poli deva” is usually rendered “O God, grant abundance”.',
+    link: { to: '/geography', label: 'Kodagu among Karnataka’s landscapes' } },
   { id: 'pattadakal', name: 'Pattadakal Dance Festival', kn: 'ಪಟ್ಟದಕಲ್ಲು ನೃತ್ಯೋತ್ಸವ', img: 'festPattadakal', cap: 'Dancers on the festival stage, Pattadakal Dance Festival',
     when: 'Annual, usually January', where: 'Pattadakal, Bagalkot district', kind: 'fact',
     what: 'Classical dancers perform on an open-air stage against the floodlit 8th-century temples.',
@@ -54,4 +69,6 @@ export const FESTIVALS = [
     link: { to: '/kannada', label: 'Tulu and the languages of Karnataka' } },
 ];
 
-export const FESTIVAL_SOURCES = [SRC.kaTourism, SRC.culture, SRC.W('Mysore Dasara'), SRC.W('Kambala'), SRC.W('Bengaluru Karaga'), SRC.W('Mahamastakabhisheka'), SRC.W('Bhuta Kola'), SRC.W('Talakaveri')];
+export const FESTIVAL_SOURCES = [SRC.kaTourism, SRC.culture, SRC.W('Mysore Dasara'), SRC.W('Kambala'), SRC.W('Bengaluru Karaga'), SRC.W('Mahamastakabhisheka'), SRC.W('Bhuta Kola'), SRC.W('Talakaveri'), SRC.W('Ugadi'), SRC.W('Makar Sankranti'),
+  { label: 'Kodagu district — Culture & heritage', url: 'https://kodagu.nic.in/en/culture-heritage/', kind: 'Official' },
+  { label: 'Deccan Herald — “Revering nature & culture” (Puttari, 6 Dec 2016)', url: 'https://www.deccanherald.com/amp/content/585010/revering-nature-culture.html', kind: 'Reference (secondary)' }];

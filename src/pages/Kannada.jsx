@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Img, NextChapter, Note, PageHero, Reveal, SectionHead, Sources, SpeakButton, Tabs, useKannadaVoice, ZoomImg } from '../components/ui.jsx';
-import { CENSUS_2011, CONSONANTS, FAMILY, KANNADA_TIMELINE, LANGUAGES, MILK, PHRASES, STAGES, VOWELS, VOWEL_SIGNS } from '../data/kannada.js';
+import { CENSUS_2011, CONSONANTS, FAMILY, KANNADA_TIMELINE, LANGUAGES, MILK, NUMERALS, PHRASES, STAGES, VOWELS, VOWEL_SIGNS } from '../data/kannada.js';
 import { SRC } from '../data/sources.js';
 
 function ScriptExplorer({ voice }) {
   const [set, setSet] = useState('vowels');
   const [sel, setSel] = useState(VOWELS[0]);
   const [cons, setCons] = useState('ಕ');
-  const list = set === 'vowels' ? VOWELS : CONSONANTS;
+  const LISTS = { vowels: VOWELS, consonants: CONSONANTS, numbers: NUMERALS };
+  const list = LISTS[set] || VOWELS;
   const consRoman = CONSONANTS.find((c) => c[0] === cons)[1].replace(/a$/, '');
   return (
     <div className="stack-lg">
-      <Tabs label="Script explorer" value={set} onChange={(v) => { setSet(v); setSel(v === 'vowels' ? VOWELS[0] : CONSONANTS[0]); }}
-        tabs={[{ id: 'vowels', label: 'Vowels · ಸ್ವರಗಳು' }, { id: 'consonants', label: 'Consonants · ವ್ಯಂಜನಗಳು' }, { id: 'kagunita', label: 'Building syllables · ಕಾಗುಣಿತ' }]} />
+      <Tabs label="Script explorer" value={set} onChange={(v) => { setSet(v); setSel((LISTS[v] || VOWELS)[0]); }}
+        tabs={[{ id: 'vowels', label: 'Vowels · ಸ್ವರಗಳು' }, { id: 'consonants', label: 'Consonants · ವ್ಯಂಜನಗಳು' }, { id: 'kagunita', label: 'Building syllables · ಕಾಗುಣಿತ' }, { id: 'numbers', label: 'Numbers · ಸಂಖ್ಯೆಗಳು' }]} />
       {set !== 'kagunita' ? (
         <>
           <div className="glyph-stage" aria-live="polite">
@@ -22,19 +23,20 @@ function ScriptExplorer({ voice }) {
               <div className="h3">“{sel[1]}”</div>
               {sel[2] ? (
                 <p style={{ margin: 0 }}>
-                  as in <span className="kn-serif" style={{ fontSize: '1.6rem', color: 'var(--yellow)' }} lang="kn">{sel[2]}</span> <i>{sel[3]}</i> — {sel[4]}
+                  {set === 'numbers' ? 'said' : 'as in'} <span className="kn-serif" style={{ fontSize: '1.6rem', color: 'var(--yellow)' }} lang="kn">{sel[2]}</span> <i>{sel[3]}</i> — {sel[4]}
                 </p>
               ) : <p style={{ margin: 0 }}>{sel[4]}</p>}
               {sel[2] && <div><SpeakButton text={sel[2]} voice={voice} /></div>}
             </div>
           </div>
-          <div className="script-grid" role="group" aria-label={set === 'vowels' ? 'Kannada vowels' : 'Kannada consonants'}>
+          <div className="script-grid" role="group" aria-label={{ vowels: 'Kannada vowels', consonants: 'Kannada consonants', numbers: 'Kannada numerals' }[set]}>
             {list.map((g) => (
               <button key={g[0]} className="glyph" aria-pressed={sel[0] === g[0]} onClick={() => setSel(g)} aria-label={`${g[0]}, ${g[1]}`} lang="kn">
                 {g[0]}<small>{g[1]}</small>
               </button>
             ))}
           </div>
+          {set === 'numbers' && <p className="tiny muted" style={{ margin: 0 }}>Kannada has its own numerals, written place by place just like 0–9: ೨೦೨೬ is 2026. Everyday signs and prices mostly use 0–9; Kannada numerals still appear in calendars, schoolbooks and some official and traditional writing.</p>}
         </>
       ) : (
         <div className="stack">

@@ -134,7 +134,7 @@ export default function Bengaluru() {
       </div></section>
       {lm && (
         <Modal onClose={() => setOpen(null)} label={lm.name}>
-          <div className="modal-grid"><Img k={lm.img} ratio="" caption={lm.cap || lm.name} /><div className="modal-body stack"><div className="eyebrow">{lm.when}</div><h2 className="h2">{lm.name}</h2><p>{lm.d}</p></div></div>
+          <div className="modal-grid"><Img k={lm.img} ratio="" caption={lm.cap || lm.name} full /><div className="modal-body stack"><div className="eyebrow">{lm.when}</div><h2 className="h2">{lm.name}</h2><p>{lm.d}</p></div></div>
         </Modal>
       )}
       <NextChapter path="/bengaluru" />

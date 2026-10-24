@@ -8,7 +8,7 @@ import { chapterByPath, knNum, nextChapter } from '../data/chapters.js';
 export const img = (k) => IMAGES[k];
 
 /* ---------- Image with attribution, or an honest placeholder ---------- */
-export function Img({ k, alt, caption, ratio = 'ratio-4x3', className = '', credit = true, eager = false, zoom = false, placeholderNote }) {
+export function Img({ k, alt, caption, ratio = 'ratio-4x3', className = '', credit = true, eager = false, zoom = false, placeholderNote, full = false }) {
   const data = IMAGES[k];
   const [loaded, setLoaded] = useState(false);
   return (
@@ -16,9 +16,9 @@ export function Img({ k, alt, caption, ratio = 'ratio-4x3', className = '', cred
       <div className={`frame ${ratio}`}>
         {data ? (
           <img
-            src={data.src}
+            src={full ? data.src : data.thumb || data.src}
             alt={alt || caption || data.description || ''}
-            loading={eager ? 'eager' : 'lazy'}
+            loading={eager || full ? 'eager' : 'lazy'}
             decoding="async"
             className={loaded ? '' : 'loading'}
             onLoad={() => setLoaded(true)}
@@ -50,7 +50,7 @@ export function ZoomImg({ title, eyebrow, info, portrait = false, buttonClass = 
       {open && createPortal(
         <Modal onClose={() => setOpen(false)} label={title}>
           <div className="modal-grid">
-            <Img k={props.k} ratio="" caption={props.caption || props.alt} placeholderNote={props.placeholderNote} className={portrait ? 'pop-portrait' : ''} />
+            <Img k={props.k} ratio="" caption={props.caption || props.alt} full placeholderNote={props.placeholderNote} className={portrait ? 'pop-portrait' : ''} />
             <div className="modal-body stack">
               {eyebrow && <div className="eyebrow">{eyebrow}</div>}
               <h2 className="h2">{title}</h2>
@@ -106,6 +106,38 @@ export function Reveal({ as: Tag = 'div', className = '', delay = 0, children, .
 export function Badge({ kind = 'fact', children }) {
   const { t } = useLang();
   return <span className={`badge ${kind}`}>{children || t(kind)}</span>;
+}
+
+// Ranked bar list (e.g. top states or languages); rows flagged `hi` are bolded and coloured.
+export function RankBars({ title, note, rows, unit = '', ranked = true, className = '' }) {
+  const [open, setOpen] = useState(null);
+  const max = Math.max(...rows.map((r) => r.v));
+  return (
+    <div className={`panel white rank-bars ${className}`}>
+      <div className="eyebrow plain">{title}</div>
+      {note && <p className="small muted">{note}</p>}
+      <ol className="stack mt-2" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+        {rows.map((r) => { const rank = 1 + rows.filter((o) => o.v > r.v).length; return (
+          <li key={r.n} aria-label={`${ranked ? `${rank}. ` : ''}${r.n}: ${r.v}${unit}`}>
+            {r.detail ? (
+              <button type="button" className="row between small rank-toggle" aria-expanded={open === r.n} onClick={() => setOpen(open === r.n ? null : r.n)}
+                style={r.hi ? { fontWeight: 800, color: 'var(--copper)', fontSize: '1rem' } : undefined}>
+                <span>{ranked && `${rank}. `}{r.n} <span className="tiny muted">{open === r.n ? '▴' : '▾'}</span></span><b>{r.v}{unit}</b>
+              </button>
+            ) : (
+              <div className="row between small" style={r.hi ? { fontWeight: 800, color: 'var(--copper)', fontSize: '1rem' } : undefined}>
+                <span>{ranked && `${rank}. `}{r.n}</span><b>{r.v}{unit}</b>
+              </div>
+            )}
+            <div style={{ height: r.hi ? 12 : 8, background: 'var(--sand)', borderRadius: 9, overflow: 'hidden' }}>
+              <div style={{ width: `${(r.v / max) * 100}%`, height: '100%', background: r.hi ? 'var(--copper)' : 'var(--indigo-3)', borderRadius: 9 }} />
+            </div>
+            {r.detail && open === r.n && <div className="rank-detail">{r.detail}</div>}
+          </li>
+        ); })}
+      </ol>
+    </div>
+  );
 }
 
 export function Note({ kind = 'tradition', title, children }) {
