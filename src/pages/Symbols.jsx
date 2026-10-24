@@ -37,6 +37,7 @@ export default function Symbols() {
             <SectionHead eyebrow="The Kannada flag · ಕನ್ನಡ ಬಾವುಟ" title="Red and yellow." />
             <p className="prose">The red-and-yellow bicolour is everywhere on 1 November — on buildings, autorickshaws, scarves and in every Rajyotsava procession. It was designed in the 1960s by the writer and activist Ma. Ramamurthy as a flag for Kannada identity, and over the decades it became the flag of Kannada pride and celebration.</p>
             <Note kind="tradition" title="What the colours mean">Yellow is commonly read as <i>arishina</i> (turmeric) and red as <i>kumkuma</i> (vermilion), both auspicious; others read them as harmony and courage. These are popular interpretations — no law prescribes a meaning.</Note>
+            <Note kind="fact" title="India’s tricolour, woven in Karnataka">The hand-woven khadi for India’s national flag comes from handloom units in Dharwad and Bagalkot districts of north Karnataka; the work began at Garag, near Dharwad, in 1954. The Karnataka Khadi Gramodyoga Samyukta Sangha in Hubballi is one of only four units in India licensed to make the national flag.</Note>
             <Note kind="fact" title="Legal status">This is a cultural flag. It is not a legally notified official flag of the State of Karnataka. In 2018 the state government proposed a separate tricolour “Nada Dhwaja” (yellow, white and red with the state emblem); it has not received the approval needed to become official.</Note>
           </div>
           <Reveal>
@@ -72,7 +73,7 @@ export default function Symbols() {
             ))}
           </div>
           <p className="tiny muted mt-4">We list only symbols we could confirm as official designations. Some lists online add a state fruit, game or other symbols; we have left those out unless an official notification could be identified.</p>
-          <div className="mt-4"><Sources items={[SRC.kaGov, SRC.W('List of Karnataka state symbols'), SRC.W('Flag of Karnataka'), SRC.W('Emblem of Karnataka'),
+          <div className="mt-4"><Sources items={[SRC.kaGov, SRC.W('List of Karnataka state symbols'), SRC.W('Flag of Karnataka'), SRC.W('Flag of India'), SRC.W('Karnataka Khadi Gramodyoga Samyukta Sangha'), SRC.W('Emblem of Karnataka'),
             SRC.W('Southern birdwing'), SRC.W('Hypselobarbus carnaticus'),
             { label: 'National Fisheries Development Board — State fishes of India', url: 'http://web.archive.org/web/20250609172735/https://nfdb.gov.in/PDF/Fish%20&%20Fisheries%20of%20India/2.State%20Fishes%20of%20India.pdf', kind: 'Official' },
             { label: 'The Hindu — “Karnataka gets its own butterfly” (17 May 2017)', url: 'https://www.thehindu.com/news/national/karnataka/karnataka-gets-its-own-butterfly/article18470618.ece', kind: 'Reference (secondary)' }]} /></div>

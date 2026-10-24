@@ -21,6 +21,7 @@ export function Img({ k, alt, caption, ratio = 'ratio-4x3', className = '', cred
             loading={eager || full ? 'eager' : 'lazy'}
             decoding="async"
             className={loaded ? '' : 'loading'}
+            style={data.focus ? { objectPosition: data.focus } : undefined}
             onLoad={() => setLoaded(true)}
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />

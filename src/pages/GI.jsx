@@ -6,7 +6,7 @@ import { SRC } from '../data/sources.js';
 // GI Registry, cross-checked against the compiled list of Indian GIs. Status: registered.
 const GI = [
   { name: 'Mysore Silk', app: '11', fy: '2004–05', type: 'Handicraft', region: 'Mysuru region', img: 'mysoreSilk', logo: '532 · 2016–17',
-    what: 'Pure mulberry silk saris with gold zari borders, woven by the state-owned Karnataka Silk Industries Corporation.', how: 'Silk from Karnataka’s sericulture belt is reeled, dyed and woven; the zari contains real gold and silver.' },
+    what: 'Pure mulberry silk saris with gold zari borders, woven by the state-owned Karnataka Silk Industries Corporation in the Mysuru factory founded in 1912 by Maharaja Krishnaraja Wadiyar IV.', how: 'Silk from Karnataka’s sericulture belt is reeled, dyed and woven; the zari contains real gold and silver.' },
   { name: 'Mysore Agarbathi', app: '13 & 18', fy: '2004–05', type: 'Manufactured', region: 'Mysuru and Karnataka', img: 'mysoreAgarbathiImg', imgCap: 'Incense sticks (illustration)',
     what: 'Incense sticks scented with sandalwood and other natural aromatics, produced by thousands of home-based workers.', how: 'Bamboo sticks are hand-rolled in a paste of charcoal, jigat powder and aromatic ingredients, then perfumed.' },
   { name: 'Bidriware', app: '20', fy: '2005–06', type: 'Handicraft', region: 'Bidar', img: 'giBidriware', imgCap: 'Bidriware boxes, vases, plates and pendants',

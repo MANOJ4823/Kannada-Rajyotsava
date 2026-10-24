@@ -13,7 +13,7 @@ const BANKS = [
 
 const SECTORS = [
   { t: 'Information technology & software services', img: 'electronicCity', cap: 'Infosys campus, Electronic City', d: 'Infosys and Wipro are headquartered in Bengaluru, which also hosts development centres of hundreds of global companies. Karnataka is among India’s leading software exporters.' },
-  { t: 'Aerospace & defence research', img: 'iisc', cap: 'Indian Institute of Science, Bengaluru', d: 'Hindustan Aircraft (now HAL) was founded in Bangalore in 1940; the National Aerospace Laboratories, DRDO laboratories and ISRO’s headquarters and satellite centre are here. Aero India is held at Yelahanka air base.' },
+  { t: 'Aerospace & defence research', img: 'iisc', cap: 'Indian Institute of Science, Bengaluru', d: 'Hindustan Aircraft (now HAL) was founded in Bangalore in 1940; the National Aerospace Laboratories, DRDO laboratories and ISRO — India’s space agency — has its headquarters and satellite centre here. Aero India is held at Yelahanka air base.' },
   { t: 'Public-sector manufacturing', img: 'halTejas', cap: 'HAL Tejas Mk1A at Aero India 2025, Bengaluru', d: 'Hindustan Aeronautics (HAL, founded 1940 as Hindustan Aircraft), Indian Telephone Industries (1948), HMT (1953), Bharat Electronics (1954) and BEML (1964) made Bengaluru an engineering city long before software.' },
   { t: 'Biotechnology', img: 'bioconPark', cap: 'Biocon Park, Bengaluru', d: 'Biocon, founded in Bengaluru in 1978 by Kiran Mazumdar-Shaw, grew into a major biopharmaceutical company; Bengaluru hosts a large biotechnology cluster and research centres such as NCBS.' },
   { t: 'Start-ups & fintech', img: 'nithinKamath', cap: 'Nithin Kamath, co-founder of Zerodha', d: 'Flipkart (2007), Zerodha (2010), Razorpay and thousands of others started in Bengaluru, often by people who moved here from elsewhere in India.' },
@@ -60,27 +60,53 @@ const NALVADI = [
   { y: '1905', t: 'Electric street lights in Bengaluru', d: 'Bengaluru’s streets are first lit by electricity on 5 August 1905. It is often called the first city in Asia to have electric street lights — a popular claim that is hard to confirm.', kind: 'tradition' },
   { y: '1907', t: 'A second house of legislature', d: 'The Mysore Legislative Council is created beside the Representative Assembly, so the state now has two houses that help frame its laws. The Vani Vilas Sagara dam at Chitradurga is completed the same year.' },
   { y: '1909', t: 'IISc, and a social reform', d: 'The Indian Institute of Science, J. N. Tata’s plan, is founded in Bengaluru. The Maharaja gave it about 371 acres of land, ₹5 lakh towards buildings and equipment, and ₹50,000 a year for its running costs. Mysore also bans the dedication of devadasis to temple service — one of the earliest such laws in India.' },
+  { y: '1912', t: 'Mysore Silk', d: 'He founds the silk-weaving factory in Mysuru that makes Mysore Silk saris; it passed to the state’s Karnataka Silk Industries Corporation (KSIC) in 1980.' },
   { y: '1913', t: 'A state bank and farm college', d: 'The Bank of Mysore is set up at Diwan M. Visvesvaraya’s initiative, along with an agricultural school in Bengaluru that grew into today’s University of Agricultural Sciences.' },
   { y: '1913', t: 'Minto Eye Hospital', d: 'Bengaluru’s eye hospital, begun in 1896, moves into the building it still uses, built during his reign. Founded as a specialist eye hospital, it is one of the oldest of its kind in the world.' },
   { y: '1915', t: 'Kannada Sahitya Parishat', d: 'The Kannada Sahitya Parishat is founded in Bengaluru to promote the Kannada language and literature.' },
   { y: '1916', t: 'University of Mysore', d: 'The first university in India outside the British-ruled provinces and the sixth in the subcontinent, with the Maharaja as its first chancellor. The Mysore Chamber of Commerce is founded the same year.' },
   { y: '1917', t: 'Engineering and women’s education', d: 'A government engineering school opens in Bengaluru (today’s UVCE), and Maharani’s College in Mysuru begins teaching science to women.' },
   { y: '1918', t: 'Railways and representation', d: 'The state-run Mysore State Railway expands, and the Miller Committee is appointed to study why backward communities had so little share in government service; its report led to reserved posts for them.' },
+  { y: '1918', t: 'More state factories', d: 'A chrome-tanning factory for leather and a wood-distillation factory at Bhadravati are added to the state’s growing list of industries.' },
+  { y: '1921', t: 'A science college and a guest palace', d: 'The Government Science College opens in Bengaluru (today’s Nrupathunga University), and Lalitha Mahal is built in Mysuru to host the Viceroy; it is now a hotel.' },
   { y: '1922', t: 'Votes for women', d: 'In April 1922 Mysore’s Legislative Council approved votes for women who met the property qualification — among the first places in India to do so.' },
   { y: '1924', t: 'Mysore Medical College', d: 'Mysore Medical College is founded in Mysuru.' },
+  { y: '1925', t: 'Care for mental health', d: 'Bengaluru’s old asylum becomes the Mysore Government Mental Hospital. It later became the first institute in India to train doctors in psychiatry, and grew into today’s NIMHANS.' },
   { y: '1927', t: 'Krishna Rajendra Hospital', d: 'The K. R. Hospital opens in Mysuru; with the Cheluvamba Hospital it is still the teaching hospital of Mysore Medical College.' },
+  { y: '1928', t: 'Yuvaraja’s College', d: 'A science college opens in Mysuru; it is still one of the University of Mysore’s constituent colleges.' },
   { y: '1932', t: 'Krishna Raja Sagara dam', d: 'The great dam on the Kaveri, begun in 1911 to Visvesvaraya’s design, is completed. It irrigates the Mandya plains, supplies water to Mysuru and Bengaluru, and has the Brindavan Gardens laid out below it.' },
+  { y: '1933', t: 'Water for Bengaluru', d: 'The Chamarajasagara reservoir at Thippagondanahalli, built under Visvesvaraya’s supervision, is inaugurated; it still supplies drinking water to western Bengaluru.' },
+  { y: '1933', t: 'Two landmarks begun', d: 'The Maharaja lays the foundation stones of Bengaluru’s Town Hall (completed 1935) and of St Philomena’s Cathedral in Mysuru (built by 1936), a neo-Gothic church inspired by Cologne Cathedral and one of the tallest in Asia.' },
   { y: '1934', t: 'Land for C. V. Raman', d: 'Land in Bengaluru is gifted to the Nobel laureate C. V. Raman for what became the Raman Research Institute.' },
   { y: '1935', t: 'Vani Vilas Hospital', d: 'A hospital for women and children is built in Bengaluru; it still serves them today, attached to Bangalore Medical College.' },
+  { y: '1936', t: 'Lamps and fertiliser', d: 'Mysore Lamps is set up in Bengaluru, followed in 1937 by a chemicals and fertiliser factory at Belagola near the KRS dam.' },
   { y: '1937', t: 'The ink of Indian democracy', d: 'He founds Mysore Lac and Paints in Mysuru. Now Mysore Paints and Varnish, it has made the indelible ink marked on voters’ fingers in Indian elections since 1962.' },
+  { y: '1937', t: 'Power from the Shimsha', d: 'A hydroelectric station on the Shimsha river is set up in December 1937 to add to the power from Shivanasamudra.' },
   { y: '1939', t: 'Glass and porcelain', d: 'A Government Glass and Porcelain Factory is set up in Bengaluru to make insulators for high-voltage power lines; it later became part of BHEL.' },
+];
+
+
+// "Firsts" and early starts in the Mysore kingdom under the Wadiyars. q = how strong the claim is.
+const FIRSTS = [
+  { y: '1805', t: 'Vaccination campaign', who: 'Krishnaraja Wadiyar III', q: 'One of India’s earliest', d: 'Queens of the royal family were vaccinated against smallpox to win public trust in the new vaccine; a painting by Thomas Hickey records it.' },
+  { y: '1881', t: 'Representative Assembly', who: 'Chamarajendra Wadiyar X', q: 'First in an Indian princely state', d: 'An assembly of the people’s representatives was set up to hear and advise the government.' },
+  { y: '1896', t: 'Specialist eye hospital', who: 'Regency, then Krishnaraja Wadiyar IV', q: 'Among the world’s oldest', d: 'Bengaluru’s Minto Eye Hospital, begun in 1896, is one of the oldest specialist eye hospitals in the world.' },
+  { y: '1902', t: 'Hydroelectric power', who: 'Krishnaraja Wadiyar IV', q: 'Among Asia’s earliest', d: 'Shivanasamudra sent power to the Kolar Gold Fields. India’s very first, smaller, hydro station opened at Darjeeling in 1897.' },
+  { y: '1903', t: 'Planned city', who: 'Krishnaraja Wadiyar IV', q: 'Among Asia’s first', d: 'Mysuru’s City Improvement Trust Board began laying out planned extensions, roads and open spaces.' },
+  { y: '1905', t: 'Electric street lights', who: 'Krishnaraja Wadiyar IV', q: 'Popular claim', kind: 'tradition', d: 'Bengaluru’s streets were lit by electricity on 5 August 1905 — often called the first in Asia, a claim that is hard to confirm.' },
+  { y: '1909', t: 'Law against devadasi dedication', who: 'Krishnaraja Wadiyar IV', q: 'One of India’s earliest', d: 'Mysore banned the dedication of girls as devadasis to temple service.' },
+  { y: '1916', t: 'University in a princely state', who: 'Krishnaraja Wadiyar IV', q: 'India’s first outside British-ruled provinces', d: 'The University of Mysore was the sixth university in the subcontinent.' },
+  { y: '1922', t: 'Votes for women', who: 'Krishnaraja Wadiyar IV', q: 'Among the first in India', d: 'Women meeting the property qualification could vote for the Legislative Council.' },
+  { y: '1925', t: 'Psychiatry training', who: 'Krishnaraja Wadiyar IV', q: 'India’s first (later)', d: 'The Mysore Government Mental Hospital in Bengaluru became the first institute in India for postgraduate training in psychiatry — today’s NIMHANS.' },
+  { y: '1935–36', t: 'Private radio station — “Akashvani”', who: 'In Krishnaraja Wadiyar IV’s Mysuru', q: 'India’s first private radio station', d: 'Prof. M. V. Gopalaswami broadcast from his home, Vittal Vihar, in Mysuru, and named the station Akashvani, “voice from the sky” — the name All India Radio later adopted.' },
+  { y: '1937', t: 'Indelible election ink', who: 'Krishnaraja Wadiyar IV', q: 'India’s only authorised maker', d: 'Mysore Lac and Paints, now Mysore Paints and Varnish, has made the ink marked on voters’ fingers since 1962.' },
 ];
 
 const FARM = [
   { t: 'Coffee', when: 'Kodagu · Chikkamagaluru · Hassan', img: 'giChikmagalurCoffee', cap: 'Shade-grown coffee plantation, Chikkamagaluru',
     d: 'Karnataka grows about 70 per cent of India’s coffee, almost all of it under shade trees on hill estates, most of them small farms. By tradition, the Sufi saint Baba Budan brought seven coffee beans from Yemen in the 17th century and planted them in the hills now called Baba Budangiri. The Coffee Board of India is headquartered in Bengaluru.' },
   { t: 'Silk', when: 'Old Mysore region · Ramanagara', img: 'ecoCocoonMarket', cap: 'Silk cocoon market, Ramanagara',
-    d: 'Karnataka is India’s leading producer of mulberry silk. Farmers grow mulberry and rear silkworms; the cocoons are sold at government markets such as Ramanagara’s, then reeled and woven. The silk-weaving factory set up in Mysuru in 1912 is now run by Karnataka Silk Industries Corporation, and the Central Silk Board is headquartered in Bengaluru.' },
+    d: 'Karnataka is India’s leading producer of mulberry silk. Farmers grow mulberry and rear silkworms; the cocoons are sold at government markets such as Ramanagara’s, then reeled and woven. The Mysore silk-weaving factory was founded in 1912 by Maharaja Krishnaraja Wadiyar IV; since 1980 it has been run by the state’s Karnataka Silk Industries Corporation (KSIC), which holds the GI registration for Mysore Silk. The Central Silk Board is headquartered in Bengaluru.' },
 ];
 
 const COOPS = [
@@ -151,16 +177,18 @@ export default function Economy() {
 
       <section className="section">
         <div className="wrap split top">
-          <div className="stack">
+          <div className="stack" style={{ alignSelf: 'stretch' }}>
             <SectionHead eyebrow="Nalvadi Krishnaraja Wadiyar · r. 1902–1940" title="Mysore, the “model state”." kn="ನಾಲ್ವಡಿ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್"
               lede="Under Maharaja Krishnaraja Wadiyar IV — remembered as Nalvadi, “the fourth” — and Diwans such as M. Visvesvaraya, the princely state of Mysore built dams, power stations, universities and factories, and passed social reforms that were rare in India at the time." />
-            <ZoomImg k="nalwadi" ratio="ratio-3x4" className="img-top" portrait caption="Krishnaraja Wadiyar IV" title="Nalvadi Krishnaraja Wadiyar" eyebrow="Maharaja of Mysore, 1902–1940"
-              info={<p>He became Maharaja as a boy in 1895; his mother, Kempananjammanni Devi, ruled as regent until he received full ruling powers on 8 August 1902. He died in 1940.</p>} />
-            <blockquote className="panel white" style={{ margin: 0 }}>
-              <p className="h4" style={{ margin: 0, fontFamily: 'var(--serif)' }}>“Mysore is the best administered state in the world.”</p>
-              <p className="small muted" style={{ margin: '8px 0 0' }}>— Lord Sankey, Britain’s Lord Chancellor, at the first Round Table Conference in London, 1930 (as widely quoted)</p>
-            </blockquote>
             <Note kind="fact" title="“Rajarshi”">In 1925 Mahatma Gandhi praised the Maharaja for taking up hand-spinning; he is remembered by the title Rajarshi, “saint-king”.</Note>
+            <div className="stack" style={{ position: 'sticky', top: 96 }}>
+              <ZoomImg k="nalwadi" ratio="ratio-3x4" className="img-top" portrait caption="Krishnaraja Wadiyar IV" title="Nalvadi Krishnaraja Wadiyar" eyebrow="Maharaja of Mysore, 1902–1940"
+                info={<p>He became Maharaja as a boy in 1895; his mother, Kempananjammanni Devi, ruled as regent until he received full ruling powers on 8 August 1902. He died in 1940.</p>} />
+              <blockquote className="panel white" style={{ margin: 0 }}>
+                <p className="h4" style={{ margin: 0, fontFamily: 'var(--serif)' }}>“Mysore is the best administered state in the world.”</p>
+                <p className="small muted" style={{ margin: '8px 0 0' }}>— Lord Sankey, Britain’s Lord Chancellor, at the first Round Table Conference in London, 1930 (as widely quoted)</p>
+              </blockquote>
+            </div>
           </div>
           <div>
             <ol className="vtl">
@@ -172,8 +200,25 @@ export default function Economy() {
               ))}
             </ol>
             <Note kind="fact" title="Before his reign">Mysore’s Representative Assembly — the first of its kind in an Indian princely state — was created in 1881 under his father, Chamarajendra Wadiyar X, and Diwan C. V. Rangacharlu. Chamarajendra Wadiyar X also helped pay for Swami Vivekananda’s journey to the 1893 Parliament of the World’s Religions in Chicago, together with the rulers of Ramnad and Khetri and Vivekananda’s disciples in Madras. And in 1805, under Krishnaraja Wadiyar III, queens of the Mysore royal family were vaccinated against smallpox; a painting by Thomas Hickey records this early campaign to win trust in the new vaccine.</Note>
+            <Note kind="fact" title="Music at his court">The Mysore palace was a centre of both Carnatic and Hindustani music. The veena maestro Veene Sheshanna and the composer Mysore Vasudevachar, chief court musician, served there; Hindustani artists such as Abdul Karim Khan and Gauhar Jan were his guests, and Barkatullah Khan was a palace musician from 1919 until 1940. Bengaluru’s K. R. Market is named after him.</Note>
             <Note kind="interpretation" title="Not from his reign">Some Bengaluru landmarks often credited to him are older or newer. Bowring Hospital opened in 1868 under the British Commissioner Lewin Bentham Bowring, before his birth. HMT (1953), BEML (1964) and BHEL are public-sector companies set up by the Government of India after Independence — see “Industries” below.</Note>
             <Note kind="fact" title="Just after his reign">Hindustan Aircraft — today’s HAL — was founded in Bengaluru on 23 December 1940, four months after his death, by Walchand Hirachand and the Mysore government under his successor, Jayachamarajendra Wadiyar. Mysore offered 700 of the factory’s 2,100 acres.</Note>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap">
+          <SectionHead eyebrow="Mysore under the Wadiyars" title="Firsts and early starts." lede="Some of these were firsts in India; others were among the first. Each card says which." />
+          <div className="grid g3 mt-4">
+            {FIRSTS.map((f, i) => (
+              <Reveal key={f.t} delay={i % 3} className="panel white">
+                <div className="row between"><span className="tiny muted" style={{ letterSpacing: '0.12em' }}>{f.y}</span>{f.kind === 'tradition' ? <Badge kind="tradition">{f.q}</Badge> : <span className="tiny" style={{ color: 'var(--copper)', fontWeight: 700 }}>{f.q}</span>}</div>
+                <div className="h4 mt-1">{f.t}</div>
+                <p className="small mt-1" style={{ marginBottom: 6 }}>{f.d}</p>
+                <div className="tiny muted">{f.who}</div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -282,7 +327,8 @@ export default function Economy() {
           SRC.W('Kanaginahal'), SRC.W('Karnataka Milk Federation'), SRC.W('Udupi cuisine'), SRC.W('Mavalli Tiffin Rooms'), SRC.W('MTR Foods'), SRC.W('Darshini (restaurant)'),
           SRC.W('Raichur Thermal Power Station'), SRC.W('Kaiga Atomic Power Station'), SRC.W('Pavagada Solar Park'), SRC.W('JSW Steel'), SRC.W('Mining scams in India'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Mysore Representative Assembly'), SRC.W('University of Mysore'), SRC.W('Women\'s suffrage in India'), SRC.W('Variolation'), SRC.W('Kannada Sahitya Parishat'), SRC.W('Indian Institute of Science'), SRC.W('Chamarajendra Wadiyar X'), SRC.W('Swami Vivekananda'), SRC.W('Hindustan Aeronautics Limited'), SRC.W('Mysore'),
           SRC.W('Minto Eye Hospital'), SRC.W('Vanivilas Women and Children Hospital'), SRC.W('Krishna Rajendra Hospital'), SRC.W('Mysore Paints and Varnish'), SRC.W('Bowring and Lady Curzon Hospitals'), SRC.W('HMT Limited'), SRC.W('BEML'),
-          { label: 'Indian Institute of Science — Origin of the Institute', url: 'https://www.iisc.ac.in/wp-content/uploads/2018/03/ORIGIN.pdf', kind: 'Official' }]} />
+          SRC.W('Thippagondanahalli Reservoir'), SRC.W('Bengaluru Town Hall'), SRC.W('St. Philomena\'s Cathedral, Mysore'), SRC.W('Lalitha Mahal'), SRC.W('Government Science College, Bengaluru'), SRC.W('Yuvaraja\'s College, Mysore'), SRC.W('National Institute of Mental Health and Neurosciences'), SRC.W('Shimsha'), SRC.W('Veene Sheshanna'), SRC.W('Mysore Vasudevachar'), SRC.W('K. R. Market'),
+          SRC.W('All India Radio'), { label: 'Indian Institute of Science — Origin of the Institute', url: 'https://www.iisc.ac.in/wp-content/uploads/2018/03/ORIGIN.pdf', kind: 'Official' }]} />
       </div></section>
       <NextChapter path="/economy" />
     </>

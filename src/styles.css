@@ -270,7 +270,7 @@ html[lang='kn'] .narration { font-family: var(--kn-serif); font-size: clamp(1.2r
 .fig { margin: 0; position: relative; }
 .fig .frame { overflow: hidden; background: var(--sand-2); position: relative; border-radius: var(--radius); }
 .fig img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease), opacity 0.6s; }
-.fig.img-top { max-width: 360px; }
+.fig.img-top { max-width: 320px; }
 .fig.img-top img { object-position: 50% 0; }
 .fig img.loading { opacity: 0; }
 .fig.zoom:hover img { transform: scale(1.04); }

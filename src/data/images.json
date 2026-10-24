@@ -3966,5 +3966,30 @@
   "credit": "Photo supplied by the celebration organisers",
   "description": "Upahara Darshini, a self-service darshini restaurant with standing tables",
   "thumb": "/images/supplied/thumbs/upahara-darshini.jpg"
+ },
+ "kempegowdaHead": {
+  "file": "kempegowda-statue-head.jpg",
+  "src": "/images/supplied/kempegowda-statue-head.jpg",
+  "w": 370,
+  "h": 493,
+  "page": "https://commons.wikimedia.org/wiki/File:Kempe_Gowda_statue,_Kempegowda_International_Airport,_Bangalore_(2022)_cropped.jpg",
+  "author": "C1MM",
+  "license": "CC BY-SA 4.0 (cropped)",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "description": "Statue of Kempegowda I at Kempegowda International Airport — head and shoulders, cropped from a photograph by C1MM",
+  "thumb": "/images/supplied/thumbs/kempegowda-statue-head.jpg",
+  "focus": "50% 6%"
+ },
+ "prasanna": {
+  "file": "E A S Prasanna.jpg",
+  "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/E_A_S_Prasanna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "w": 1600,
+  "h": 1067,
+  "page": "https://commons.wikimedia.org/wiki/File:E_A_S_Prasanna.jpg",
+  "author": "Pareshnand",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "description": "E A S Prasanna",
+  "original": "1200x800"
  }
 }

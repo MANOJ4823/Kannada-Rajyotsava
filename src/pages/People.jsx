@@ -16,7 +16,7 @@ const GROUPS = {
         body: 'Consolidated the Rashtrakuta kingdom; the Kailasa Temple at Ellora (Maharashtra) is associated with his patronage on the evidence of later Rashtrakuta grants.' },
       { name: 'Sri Krishnadevaraya', when: 'r. 1509–1529', role: 'Karnata (Vijayanagara) emperor · Title: “Kannada Rajya Rama Ramana”', img: 'krishnadevaraya', cap: 'Statues of Sri Krishnadevaraya with queens Chinnadevi and Tirumaladevi, Chandragiri Museum',
         body: 'A period of military success and generous patronage of Kannada, Telugu, Sanskrit and Tamil literature; himself the author of the Telugu poem Amuktamalyada. His rule extended far beyond today’s Karnataka.' },
-      { name: 'Kempegowda I', when: 'c. 1510–1569', role: 'Chieftain of Yelahanka; founder of Bengaluru · Title: “Nadaprabhu”', img: 'kempegowda', cap: 'Modern statue of Kempegowda, Kempegowda International Airport',
+      { name: 'Kempegowda I', when: 'c. 1510–1569', role: 'Chieftain of Yelahanka; founder of Bengaluru · Title: “Nadaprabhu”', img: 'kempegowdaHead', cap: 'Modern statue of Kempegowda, Kempegowda International Airport',
         body: 'A Nadaprabhu (local chief) under the Karnata (Vijayanagara) empire, he founded the fort-town of Bengaluru in 1537 (the traditional date), laid out its market quarters (petes) and encouraged tanks for water.' },
       { name: 'Madakari Nayaka V', when: 'r. 1758–1779', role: 'Last Nayaka ruler of Chitradurga · Title: “Eppatelu Palegarara Ganda”', img: 'madakari', cap: 'Modern statue of Madakari Nayaka',
         body: 'Held Chitradurga until it fell after a long siege in 1779. The fort was built in several phases; individual walls and structures are attributed variously to him, his predecessors and later rulers, so we avoid crediting him with the whole fort.' },
@@ -35,7 +35,7 @@ const GROUPS = {
     intro: 'Builders of institutions and industries — distinguished here by what each personally did.',
     people: [
       { name: 'Sir M. Visvesvaraya', when: '1861–1962', role: 'Engineer and statesman · Bharat Ratna 1955', img: 'visvesvaraya', cap: 'M. Visvesvaraya in his thirties',
-        body: 'As chief engineer he led the Krishna Raja Sagara dam project on the Kaveri; he designed automatic sluice gates, advised on flood protection for Hyderabad after the 1908 floods, and as Diwan of Mysore (1912–1918) promoted industries, banking and technical education. India marks Engineers’ Day on his birthday, 15 September. Many public works of his era were the work of large teams; we credit him with the roles he actually held.' },
+        body: 'As chief engineer he led the Krishna Raja Sagara dam project on the Kaveri; he designed automatic sluice gates, advised on flood protection for Hyderabad after the 1908 floods, and as Diwan of Mysore (1912–1918) promoted industries, banking and technical education. His birthday, 15 September, is celebrated as Engineers’ Day not only in India but also in Sri Lanka and Tanzania. Many public works of his era were the work of large teams; we credit him with the roles he actually held.' },
       { name: 'C. N. R. Rao', when: 'b. 1934', role: 'Chemist · Bharat Ratna 2014', img: 'cnrRao', cap: 'C. N. R. Rao',
         body: 'Bengaluru-born scientist known for solid-state and materials chemistry, long associated with the Indian Institute of Science and the Jawaharlal Nehru Centre for Advanced Scientific Research.' },
       { name: 'K. Kasturirangan', when: '1940–2025', role: 'Space scientist, ISRO chairman 1994–2003 · Padma Vibhushan 2000', img: 'kasturirangan', cap: 'K. Kasturirangan at the Indian Institute of Science, 2010',
@@ -94,6 +94,8 @@ const GROUPS = {
     people: [
       { name: 'Anil Kumble', when: 'b. 1970, Bengaluru', role: 'Cricketer, captain and coach', img: 'kumble', cap: 'Anil Kumble',
         body: 'India’s highest Test wicket-taker with 619 wickets. In 1999 at Delhi he took all ten wickets in a Test innings against Pakistan — only the second bowler ever to do so.' },
+      { name: 'E. A. S. Prasanna', when: 'b. 1940, Bengaluru', role: 'Off-spin bowler · Padma Shri 1970', img: 'prasanna', cap: 'E. A. S. Prasanna',
+        body: 'One of India’s famous spin quartet, he took 189 wickets in 49 Tests. When he was picked for the 1962 tour of the West Indies, his father was reluctant to let him go; Maharaja Jayachamarajendra Wadiyar of Mysore encouraged him and helped make the trip possible. He later finished his engineering degree at the National Institute of Engineering, Mysuru, and in 2004 received the BCCI’s C. K. Nayudu Lifetime Achievement Award.' },
       { name: 'Prakash Padukone', when: 'b. 1955', role: 'Badminton player', img: 'padukone', cap: 'Prakash Padukone',
         body: 'Won the All England Championships in 1980, the first Indian to do so, and later co-founded a leading badminton academy in Bengaluru.' },
       { name: 'Ashwini Ponnappa', when: 'b. 1989, Bengaluru', role: 'Badminton doubles player · Arjuna Award 2012', img: 'ashwiniPonnappa', cap: 'Ashwini Ponnappa at the 2010 Commonwealth Games, New Delhi',
@@ -221,7 +223,7 @@ export default function People() {
             </div>
             <div>{group.people.map((p) => <Person key={p.name} p={p} onOpen={setOpen} />)}</div>
           </div>
-          <div className="mt-5"><Sources items={[SRC.padma, SRC.dff, SRC.pib, SRC.kamath, SRC.W('M. Visvesvaraya'), SRC.W('Saalumarada Thimmakka'), SRC.W('Arun Yogiraj'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Anil Kumble'),
+          <div className="mt-5"><Sources items={[SRC.padma, SRC.dff, SRC.pib, SRC.kamath, SRC.W('M. Visvesvaraya'), SRC.W('Saalumarada Thimmakka'), SRC.W('Arun Yogiraj'), SRC.W('Krishna Raja Wadiyar IV'), SRC.W('Anil Kumble'), SRC.W('E. A. S. Prasanna'), SRC.W('Jayachamarajendra Wadiyar'),
             SRC.W('Rani Chennabhairadevi'), SRC.W('Keladi Chennamma'), SRC.W('Sangolli Rayanna'), SRC.W('Madhvacharya'), SRC.W('Vidyaranya'), SRC.W('Jakanachari'), SRC.W('Shivakumara Swami'),
             SRC.W('K. M. Cariappa'), SRC.W('Kodandera Subayya Thimayya'), SRC.W('C. D. Subbaiah'), SRC.W('Biddanda Chengappa Nanda'),
             SRC.W('Kiran Mazumdar-Shaw'), SRC.W('K. Kasturirangan'), SRC.W('Anke Gowda'), SRC.W('Devi Shetty'), SRC.W('C. N. Manjunath'),
