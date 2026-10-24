@@ -77,6 +77,23 @@ export default function Food() {
             <p className="lede">Three ingredients — gram flour, ghee and sugar — and a great deal of skill.</p>
             <p className="muted">The commonly told story places its creation in the kitchens of the Mysore Palace under the Wadiyar court, traditionally during the reign of Krishnaraja Wadiyar IV, and credits the royal cook Kakasura Madappa. Asked the name of his new sweet, he is said to have called it simply “Mysore paka” — <i>pāka</i> meaning a sweet made with sugar syrup. Descendants of Madappa’s family still run a sweet shop in Mysuru.</p>
             <Note kind="tradition" title="Traditional account">No contemporary palace record of the invention is known; this is a family and popular tradition, widely accepted and cherished.</Note>
+            <div className="panel dark">
+              <div className="eyebrow plain mb-2">The cook behind the sweet</div>
+              <div className="madappa">
+                <ZoomImg k="madappaPortrait" ratio="ratio-3x4" credit={false} alt="Framed portrait of Kakasura Madappa" portrait
+                  caption={undefined} title="Kakasura Madappa" eyebrow="The cook behind the sweet"
+                  info={<>
+                    <p>A cook in the royal kitchen of the Mysore Palace, remembered as the creator of Mysore pak. Most accounts place the invention in the reign of Krishnaraja Wadiyar IV (1894–1940); some name Krishnaraja Wadiyar III instead.</p>
+                    <p className="small muted">His descendants have sold the sweet for generations at Guru Sweets, a small shop on Sayyaji Rao Road at the corner of Devaraja Market in Mysuru.</p>
+                  </>} />
+                <div>
+                  <h3 className="h3">Kakasura Madappa</h3>
+                  <p style={{ margin: '8px 0 0' }}>A cook in the royal kitchen of the Mysore Palace, remembered as the creator of Mysore pak. Most accounts place the invention in the reign of Krishnaraja Wadiyar IV (1894–1940); some name Krishnaraja Wadiyar III instead.</p>
+                  <p className="small muted" style={{ margin: '8px 0 0' }}>His descendants have sold the sweet for generations at Guru Sweets, a small shop on Sayyaji Rao Road at the corner of Devaraja Market in Mysuru.</p>
+                  <p className="tiny muted" style={{ margin: '8px 0 0' }}>Image: framed portrait of Kakasura Madappa — photo supplied by the celebration organisers.</p>
+                </div>
+              </div>
+            </div>
           </Reveal>
           <Reveal className="stack">
             <ZoomImg k="mysorePak" ratio="ratio-4x3" caption="Mysore pak"
@@ -106,7 +123,8 @@ export default function Food() {
           {list.length ? <div className="grid g3">{list.map((d) => <DishCard key={d.id} d={d} />)}</div>
             : <p className="muted">No dishes in this combination yet — try another region or type.</p>}
           <p className="tiny muted mt-4">Photographs are openly licensed from Wikimedia Commons (credits on the Sources page). Where a photograph shows a closely related dish under another name, the caption says so.</p>
-          <div className="mt-4"><Sources items={[SRC.kaTourism, SRC.giRegistry, SRC.W('Mysore pak'), SRC.W('Dharwad pedha'), SRC.W('Cuisine of Karnataka'), SRC.W('Kori rotti'), SRC.W('Baba Budan')]} /></div>
+          <div className="mt-4"><Sources items={[SRC.kaTourism, SRC.giRegistry, SRC.W('Mysore pak'), SRC.W('Dharwad pedha'), SRC.W('Cuisine of Karnataka'), SRC.W('Kori rotti'), SRC.W('Baba Budan'),
+            { label: 'The Hindu — “In search of Mysore Pak” (25 Nov 2012)', url: 'https://www.thehindu.com/features/metroplus/Food/In-search-of-Mysore-Pak/article15616920.ece', kind: 'Reference (secondary)' }]} /></div>
         </div>
       </section>
       <NextChapter path="/food" />

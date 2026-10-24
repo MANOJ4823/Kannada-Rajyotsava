@@ -61,6 +61,20 @@ export const PLACES = [
   { id: 'yana', name: 'Yana & Vibhuti Falls', lat: 14.59, lon: 74.56, type: 'nature' },
   { id: 'stmarys', name: "St Mary's Islands", lat: 13.38, lon: 74.673, type: 'nature' },
   { id: 'gokarna', name: 'Gokarna', lat: 14.5479, lon: 74.3188, type: 'nature' },
+  // Protected areas (marker at an interior point, not the extent of the reserve)
+  { id: 'bandipur', name: 'Bandipur', lat: 11.662, lon: 76.627, type: 'nature' },
+  { id: 'nagarahole', name: 'Nagarahole', lat: 12.06, lon: 76.151, type: 'nature' },
+  { id: 'bhadra', name: 'Bhadra Tiger Reserve', lat: 13.695, lon: 75.637, type: 'nature' },
+  { id: 'kalitr', name: 'Kali Tiger Reserve', lat: 15.017, lon: 74.383, type: 'nature' },
+  { id: 'bannerghatta', name: 'Bannerghatta', lat: 12.801, lon: 77.576, type: 'nature' },
+  { id: 'cauverywls', name: 'Cauvery Wildlife Sanctuary', lat: 12.306, lon: 77.35, type: 'nature' },
+  { id: 'mmhills', name: 'MM Hills', lat: 12.017, lon: 77.538, type: 'nature' },
+  { id: 'brahmagiriwls', name: 'Brahmagiri Wildlife Sanctuary', lat: 12.106, lon: 75.817, type: 'nature' },
+  { id: 'sharavathiwls', name: 'Sharavathi Valley', lat: 14.118, lon: 74.859, type: 'nature' },
+  { id: 'daroji', name: 'Daroji', lat: 15.265, lon: 76.62, type: 'nature' },
+  { id: 'ranebennur', name: 'Ranebennur', lat: 14.6, lon: 75.754, type: 'nature' },
+  { id: 'gudavi', name: 'Gudavi', lat: 14.44, lon: 75.016, type: 'nature' },
+  { id: 'kokkarebellur', name: 'Kokkare Bellur', lat: 12.511, lon: 77.091, type: 'nature' },
 ];
 
 export const placeById = Object.fromEntries(PLACES.map((p) => [p.id, p]));
