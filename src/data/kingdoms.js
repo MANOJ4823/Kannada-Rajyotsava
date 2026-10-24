@@ -43,7 +43,7 @@ export const KINGDOMS = [
     kannada: 'Ganga rulers issued many copper-plate grants and stone inscriptions in Kannada and Sanskrit. The inscriptions on Chandragiri hill at Shravanabelagola span many centuries and are a major source for early Kannada.',
     architecture: 'Ganga sculpture reaches its peak in the Gommateshwara statue — roughly 17–18 metres (57–58 ft; figures vary by source). Jain basadis on Chandragiri hill and the temples of Talakadu belong to this world.',
     images: [
-      { k: 'gommateshwara', cap: 'Gommateshwara (Bahubali), Vindhyagiri, Shravanabelagola — commissioned c. 983 CE' },
+      { k: 'gommateshwaraHead', cap: 'Gommateshwara (Bahubali), Vindhyagiri, Shravanabelagola — commissioned c. 983 CE' },
       { k: 'shravanabelagola', cap: 'Shravanabelagola from the hill, with the Kalyani tank' },
       { k: 'talakad', cap: 'Vaidyeshvara Temple, Talakadu' },
     ],

@@ -3496,5 +3496,16 @@
   "license": "Used with organisers’ permission",
   "credit": "Photo supplied by the celebration organisers (clarity enhanced)",
   "description": "Framed portrait of Kakasura Madappa"
+ },
+ "gommateshwaraHead": {
+  "file": "gommateshwara-head-and-shoulders.jpg",
+  "src": "/images/supplied/gommateshwara-head-and-shoulders.jpg",
+  "w": 1920,
+  "h": 709,
+  "page": "https://commons.wikimedia.org/wiki/File:Gommateshwara,_Shravanabelagola.jpg",
+  "author": "Kuldeep S",
+  "license": "CC BY-SA 4.0 (cropped)",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "description": "Gommateshwara (Bahubali), Shravanabelagola — head and shoulders, cropped from a photograph by Kuldeep S"
  }
 }
